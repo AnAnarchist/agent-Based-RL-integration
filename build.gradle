@@ -58,3 +58,54 @@ task run (type: JavaExec, dependsOn: 'classes') {
     }
     main 'jacamo.infra.JaCaMoLauncher'
     args 'jacamoRL.jcm'
+    classpath sourceSets.main.runtimeClasspath
+}
+
+task runPythonAgent(type:Exec) {
+    group       ' Python'
+    description 'runs the python agent'
+    workingDir 'src/python/agt'
+    commandLine 'python3', 'tf_agent_rest.py'
+}
+
+task runPythonEnv(type:Exec) {
+    group       ' Python'
+    description 'runs the python environment'
+    workingDir 'src/python/env'
+    commandLine 'python3', 'tf_env_rest.py'
+}
+
+task uberJar(type: Jar, dependsOn: 'classes') {
+    group      ' JaCaMo'
+    description 'creates a single runnable jar file with all dependencies'
+
+    manifest {
+        attributes 'Main-Class': 'jacamo.infra.JaCaMoLauncher'
+    }
+    baseName = 'jacamoRL' // the name must start with jacamo so that jacamo...jar is found in the classpath
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    from (project.projectDir.absolutePath) {
+        include '**/*.asl'
+        include '**/*.xml'
+        include '**/*.jcm'
+        include '*.properties'
+    }
+    from (project.buildDir.absolutePath + '/jcm') {
+        include '**/*'
+    }
+    with jar
+
+    doFirst {
+        copy {
+            from 'jacamoRL.jcm'
+            rename 'jacamoRL.jcm','default.jcm'
+            into project.buildDir.absolutePath + '/jcm'
+        }
+    }
+}
+
+clean {
+    delete 'bin'
+    delete 'build'
+    delete 'log'
+}
