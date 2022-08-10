@@ -17,4 +17,12 @@ mas jacamoRL {
     agent rlagent : gridworld_agent.asl {
     	ag-bb-class: rl.beliefbase.BeliefBaseRL	
     	focus: gridworld.cp
-    	verbose: 
+    	verbose: 0
+    }
+    
+    workspace gridworld {
+        artifact cp: gridworld.GridWorldEnv()
+    }
+
+}
+
