@@ -7,4 +7,9 @@ rl_parameter(epsilon, 0.4).
 rl_parameter(epsilon_decay, 0.9999).
 rl_parameter(epsilon_min, 0).
 
-rl_observe(reach_finish
+rl_observe(reach_finish, pos).
+
+rl_reward(reach_finish, 10) :- finishline.
+rl_reward(reach_finish, -1) :- not finishline.
+
+rl_terminal(reach_finish) :- finish
