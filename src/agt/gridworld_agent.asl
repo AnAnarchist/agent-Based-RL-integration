@@ -12,4 +12,10 @@ rl_observe(reach_finish, pos).
 rl_reward(reach_finish, 10) :- finishline.
 rl_reward(reach_finish, -1) :- not finishline.
 
-rl_terminal(reach_finish) :- finish
+rl_terminal(reach_finish) :- finishline.
+
+!start.
+
+//example of use of expected return
+/* 
++!start : rl.expected_return(reach_finish,R) & R > 50 <- rl.execute(reach_finis
