@@ -18,4 +18,10 @@ rl_terminal(reach_finish) :- finishline.
 
 //example of use of expected return
 /* 
-+!start : rl.expected_return(reach_finish,R) & R > 50 <- rl.execute(reach_finis
++!start : rl.expected_return(reach_finish,R) & R > 50 <- rl.execute(reach_finish); !start.
+
++!start <- !move(right); !move(down); rl.execute(reach_finish); !start.
+*/
+
+//without expected return
++!start : true <- rl.ex
