@@ -24,4 +24,6 @@ rl_terminal(reach_finish) :- finishline.
 */
 
 //without expected return
-+!start : true <- rl.ex
++!start : true <- rl.execute(reach_finish); !start. //!start in order to continue after the end of the episode
+
+@action[rl_goal(reach_finish), 
