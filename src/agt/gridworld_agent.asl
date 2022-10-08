@@ -29,4 +29,4 @@ rl_terminal(reach_finish) :- finishline.
 @action[rl_goal(reach_finish), rl_param(direction(set(right, left, up, down)))]
 +!move(Direction) <- move(Direction).
 
-{ include("$jacamoJar/templates/common-cartago
+{ include("$jacamoJar/templates/common-cartago.asl") }
