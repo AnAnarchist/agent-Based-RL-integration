@@ -19,4 +19,7 @@ rl_terminal(reach_top) :- on_top.
 
 !start.
 
-+!start : true <- rl.execute(reach_top); !start. //!start in order to con
++!start : true <- rl.execute(reach_top); !start. //!start in order to continue after the end of the episode
+
+@action[rl_goal(reach_top), rl_param(direction(set(back, none, forth)))]
++!move(Directio
