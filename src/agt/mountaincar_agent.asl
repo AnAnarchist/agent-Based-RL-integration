@@ -10,4 +10,9 @@ rl_parameter(replay_buffer_capacity, 100000).
 rl_parameter(initial_collect_steps, 0).
 rl_parameter(collect_steps_per_iteration, 0).
 
-rl_observe(r
+rl_observe(reach_top, position(real(-1.2, 0.6))).
+rl_observe(reach_top, speed(real(-0.07, 0.07))).
+
+rl_reward(reach_top, -1).
+
+rl_termin
