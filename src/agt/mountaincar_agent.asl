@@ -15,4 +15,8 @@ rl_observe(reach_top, speed(real(-0.07, 0.07))).
 
 rl_reward(reach_top, -1).
 
-rl_termin
+rl_terminal(reach_top) :- on_top.
+
+!start.
+
++!start : true <- rl.execute(reach_top); !start. //!start in order to con
