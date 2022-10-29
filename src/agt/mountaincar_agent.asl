@@ -22,4 +22,6 @@ rl_terminal(reach_top) :- on_top.
 +!start : true <- rl.execute(reach_top); !start. //!start in order to continue after the end of the episode
 
 @action[rl_goal(reach_top), rl_param(direction(set(back, none, forth)))]
-+!move(Directio
++!move(Direction) <- move(Direction).
+
+{ include("$jacamoJar/templates/common-cartago.asl") }
