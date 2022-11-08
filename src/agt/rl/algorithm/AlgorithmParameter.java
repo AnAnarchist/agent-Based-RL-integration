@@ -12,4 +12,7 @@ public class AlgorithmParameter {
 	private static final String EPSILON_TERM = "epsilon";
 	private static final String EPSILON_DECAY_TERM = "epsilon_decay";
 	private static final String EPSILON_MIN_TERM = "epsilon_min";
-	private static fi
+	private static final String POLICY_TERM = "policy";
+	public static final String ONLY_EXPLOIT_POLICY = "greedy";
+	public static final String EGREEDY_POLICY = "egreedy";
+	
