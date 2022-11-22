@@ -16,3 +16,8 @@ public class AlgorithmParameter {
 	public static final String ONLY_EXPLOIT_POLICY = "greedy";
 	public static final String EGREEDY_POLICY = "egreedy";
 	
+	private double alpha = 0.5;
+	private double gamma = 0.5;
+	private double epsilon = 0;
+	private double currentEpsilon = 0;
+	private doub
