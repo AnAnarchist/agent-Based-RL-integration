@@ -20,4 +20,7 @@ public class AlgorithmParameter {
 	private double gamma = 0.5;
 	private double epsilon = 0;
 	private double currentEpsilon = 0;
-	private doub
+	private double epsilonDecay = 1;
+	private double epsilonMin = 0;
+	private double initialActionValue = 0;
+	private String policy = EGREEDY_POLI
