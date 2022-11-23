@@ -23,4 +23,11 @@ public class AlgorithmParameter {
 	private double epsilonDecay = 1;
 	private double epsilonMin = 0;
 	private double initialActionValue = 0;
-	private String policy = EGREEDY_POLI
+	private String policy = EGREEDY_POLICY;
+	private boolean dynamicEpsilon = true;
+	
+	private int episode = 1;
+	
+	public double getAlpha() { return alpha; }
+
+	public do
