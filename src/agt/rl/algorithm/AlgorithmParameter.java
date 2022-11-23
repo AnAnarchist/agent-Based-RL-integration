@@ -30,4 +30,8 @@ public class AlgorithmParameter {
 	
 	public double getAlpha() { return alpha; }
 
-	public do
+	public double getGamma() { return gamma; }
+
+	public double getEpsilon() { return currentEpsilon; }
+
+	public double getInitialActionValue(
