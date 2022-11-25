@@ -34,4 +34,8 @@ public class AlgorithmParameter {
 
 	public double getEpsilon() { return currentEpsilon; }
 
-	public double getInitialActionValue(
+	public double getInitialActionValue() { return initialActionValue; }
+
+	public String getPolicy() { return policy; }
+
+	public void updateParameters(Map<Term, Term> parameters) 
