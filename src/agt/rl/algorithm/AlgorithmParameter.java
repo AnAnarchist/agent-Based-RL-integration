@@ -38,4 +38,11 @@ public class AlgorithmParameter {
 
 	public String getPolicy() { return policy; }
 
-	public void updateParameters(Map<Term, Term> parameters) 
+	public void updateParameters(Map<Term, Term> parameters) {
+		beliefToParameters(parameters);
+		updateEpsilon();
+	}
+	
+	public void episodeEnd() {
+		episode++;
+		if(dynamicEpsilo
