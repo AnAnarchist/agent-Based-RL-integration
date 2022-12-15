@@ -45,4 +45,10 @@ public class AlgorithmParameter {
 	
 	public void episodeEnd() {
 		episode++;
-		if(dynamicEpsilo
+		if(dynamicEpsilon) {
+			currentEpsilon = (double) 1/episode;
+		}
+	}
+	
+	private void beliefToParameters(Map<Term, Term> parameters) {
+		for(Entry<Term, Term> parameter
