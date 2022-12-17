@@ -51,4 +51,8 @@ public class AlgorithmParameter {
 	}
 	
 	private void beliefToParameters(Map<Term, Term> parameters) {
-		for(Entry<Term, Term> parameter
+		for(Entry<Term, Term> parameter : parameters.entrySet()) {
+			String parameterKey = parameter.getKey().toString();
+			String parameterValue = parameter.getValue().toString();
+			
+	
