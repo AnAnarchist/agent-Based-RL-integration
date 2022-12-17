@@ -55,4 +55,7 @@ public class AlgorithmParameter {
 			String parameterKey = parameter.getKey().toString();
 			String parameterValue = parameter.getValue().toString();
 			
-	
+			if(parameterKey.equals(POLICY_TERM)) {
+				policy = parameterValue;
+			} else {
+				if(parameterKey.equals(EPSILON_TER
