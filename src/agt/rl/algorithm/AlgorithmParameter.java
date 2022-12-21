@@ -63,4 +63,8 @@ public class AlgorithmParameter {
 				} else {
 					double value = 0;
 					try {
-						 value = Double
+						 value = Double.parseDouble(parameterValue);
+					} catch(Exception e) {}
+					if(value >= 0) {
+						if(parameterKey.equals(ALPHA_TERM)) {
+	
