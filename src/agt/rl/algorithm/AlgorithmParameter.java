@@ -58,4 +58,9 @@ public class AlgorithmParameter {
 			if(parameterKey.equals(POLICY_TERM)) {
 				policy = parameterValue;
 			} else {
-				if(parameterKey.equals(EPSILON_TER
+				if(parameterKey.equals(EPSILON_TERM) && parameterValue.equals("1/t")) {
+					dynamicEpsilon = true;
+				} else {
+					double value = 0;
+					try {
+						 value = Double
