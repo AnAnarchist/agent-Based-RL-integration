@@ -70,4 +70,8 @@ public class AlgorithmParameter {
 							alpha = value;
 						} else if(parameterKey.equals(GAMMA_TERM)) {
 							gamma = value;
-						} else if(parameterKey.equals(EPSILO
+						} else if(parameterKey.equals(EPSILON_TERM)) {
+							epsilon = value;
+							dynamicEpsilon = false;
+						} else if(parameterKey.equals(EPSILON_DECAY_TERM)) {
+							epsil
