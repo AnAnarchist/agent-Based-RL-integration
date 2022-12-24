@@ -67,4 +67,7 @@ public class AlgorithmParameter {
 					} catch(Exception e) {}
 					if(value >= 0) {
 						if(parameterKey.equals(ALPHA_TERM)) {
-	
+							alpha = value;
+						} else if(parameterKey.equals(GAMMA_TERM)) {
+							gamma = value;
+						} else if(parameterKey.equals(EPSILO
