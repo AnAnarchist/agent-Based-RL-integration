@@ -74,4 +74,12 @@ public class AlgorithmParameter {
 							epsilon = value;
 							dynamicEpsilon = false;
 						} else if(parameterKey.equals(EPSILON_DECAY_TERM)) {
-							epsil
+							epsilonDecay = value;
+						} else if(parameterKey.equals(EPSILON_MIN_TERM)) {
+							epsilonMin = value;
+						}
+					}
+				}
+			} 
+		}
+	}
