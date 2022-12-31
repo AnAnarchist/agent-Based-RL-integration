@@ -83,3 +83,9 @@ public class AlgorithmParameter {
 			} 
 		}
 	}
+	
+	private void updateEpsilon() {
+		if(currentEpsilon == 0) {
+			currentEpsilon = epsilon;
+		}
+		currentEpsilo
