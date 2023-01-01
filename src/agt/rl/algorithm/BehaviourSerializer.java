@@ -3,4 +3,10 @@ package rl.algorithm;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class BehaviourSerializer {
+	
+	private S
