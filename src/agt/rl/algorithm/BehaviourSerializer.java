@@ -11,4 +11,7 @@ public class BehaviourSerializer {
 	
 	private String value_function_directory = "valuefunction";
 	private String value_function_filename = "/learnedvf";
-	private String value_functio
+	private String value_function_extension = ".sar";
+	private String value_function_file = value_function_directory + value_function_filename + value_function_extension;
+	
+	private
