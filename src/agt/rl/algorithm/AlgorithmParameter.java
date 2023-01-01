@@ -88,4 +88,9 @@ public class AlgorithmParameter {
 		if(currentEpsilon == 0) {
 			currentEpsilon = epsilon;
 		}
-		currentEpsilo
+		currentEpsilon = currentEpsilon * epsilonDecay;
+		if(currentEpsilon < epsilonMin) {
+			currentEpsilon = epsilonMin;
+		}
+	}
+
