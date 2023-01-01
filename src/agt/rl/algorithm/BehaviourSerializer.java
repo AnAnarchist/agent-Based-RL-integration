@@ -9,4 +9,6 @@ import java.io.ObjectOutputStream;
 
 public class BehaviourSerializer {
 	
-	private S
+	private String value_function_directory = "valuefunction";
+	private String value_function_filename = "/learnedvf";
+	private String value_functio
