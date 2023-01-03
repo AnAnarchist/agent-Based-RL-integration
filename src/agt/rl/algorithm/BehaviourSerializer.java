@@ -24,4 +24,7 @@ public class BehaviourSerializer {
 	
 	private Object behaviour = null;
 	
-	public Behaviour
+	public BehaviourSerializer() {
+		File directory = new File(value_function_directory);
+	    if (saveProgress && !directory.exists()){
+	        dir
