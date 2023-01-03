@@ -19,4 +19,9 @@ public class BehaviourSerializer {
 	private int episodeForSaving = 1;
 	private int writeEveryNEpisode = 400;
 	
-	privat
+	private boolean saveProgress = false;
+	private boolean loadProgress = false;
+	
+	private Object behaviour = null;
+	
+	public Behaviour
