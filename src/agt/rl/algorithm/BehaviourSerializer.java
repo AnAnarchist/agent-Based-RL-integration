@@ -27,4 +27,9 @@ public class BehaviourSerializer {
 	public BehaviourSerializer() {
 		File directory = new File(value_function_directory);
 	    if (saveProgress && !directory.exists()){
-	        dir
+	        directory.mkdir();
+	    }
+	    
+	    File file = new File(value_function_file);
+	    if (file.isFile() && file.canRead()) {
+	   
