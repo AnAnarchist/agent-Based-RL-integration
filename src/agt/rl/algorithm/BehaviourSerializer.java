@@ -32,4 +32,7 @@ public class BehaviourSerializer {
 	    
 	    File file = new File(value_function_file);
 	    if (file.isFile() && file.canRead()) {
-	   
+	    	if(loadProgress) {
+				try {
+					FileInputStream fileIn = new FileInputStream(value_function_file);
+					ObjectInputStream in = new 
