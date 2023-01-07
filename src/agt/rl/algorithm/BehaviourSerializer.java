@@ -40,4 +40,6 @@ public class BehaviourSerializer {
 					in.close();
 					fileIn.close();
 				} catch (IOException i) {
-	
+					System.out.println("Can't read value function file, start with new behaviour");
+				} catch (ClassNotFoundException c) {
+		
