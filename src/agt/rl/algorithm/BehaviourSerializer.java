@@ -35,4 +35,9 @@ public class BehaviourSerializer {
 	    	if(loadProgress) {
 				try {
 					FileInputStream fileIn = new FileInputStream(value_function_file);
-					ObjectInputStream in = new 
+					ObjectInputStream in = new ObjectInputStream(fileIn);
+					behaviour = in.readObject();
+					in.close();
+					fileIn.close();
+				} catch (IOException i) {
+	
