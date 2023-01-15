@@ -49,4 +49,11 @@ public class BehaviourSerializer {
 	    	if(saveProgress) {
 		    	try {
 					file.createNewFile();
-				} catch (IOEx
+				} catch (IOException e) { e.printStackTrace(); }
+	    	}
+	    }
+	}
+	
+	public void episodeEnd(Object policy) {
+		episodeForSaving++;
+		if(saveProgress && episod
