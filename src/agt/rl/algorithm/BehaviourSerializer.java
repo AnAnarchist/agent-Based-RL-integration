@@ -60,4 +60,6 @@ public class BehaviourSerializer {
 			episodeForSaving = 0;
 			System.out.println("Start writing progress..");
 			try {
-				outFile 
+				outFile = new FileOutputStream(value_function_file, false);
+				outObject = new ObjectOutputStream(outFile);
+				outObject.writ
