@@ -56,4 +56,8 @@ public class BehaviourSerializer {
 	
 	public void episodeEnd(Object policy) {
 		episodeForSaving++;
-		if(saveProgress && episod
+		if(saveProgress && episodeForSaving >= writeEveryNEpisode) {
+			episodeForSaving = 0;
+			System.out.println("Start writing progress..");
+			try {
+				outFile 
