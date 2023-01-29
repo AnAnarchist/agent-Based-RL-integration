@@ -62,4 +62,7 @@ public class BehaviourSerializer {
 			try {
 				outFile = new FileOutputStream(value_function_file, false);
 				outObject = new ObjectOutputStream(outFile);
-				outObject.writ
+				outObject.writeObject(policy);
+				outObject.close();
+				outFile.close();
+			} catch (IOException i) { i.printStackTrace(); }
