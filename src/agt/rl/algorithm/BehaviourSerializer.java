@@ -74,4 +74,9 @@ public class BehaviourSerializer {
 		return behaviour;
 	}
 
-	public void setSaveProgress(bo
+	public void setSaveProgress(boolean saveProgress) {
+		this.saveProgress = saveProgress;
+	}
+
+	public void setLoadProgress(boolean loadProgress) {
+		this.loadProgress
