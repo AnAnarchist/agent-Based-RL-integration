@@ -66,3 +66,12 @@ public class BehaviourSerializer {
 				outObject.close();
 				outFile.close();
 			} catch (IOException i) { i.printStackTrace(); }
+			System.out.println("..end writing");
+		}
+	}
+
+	public Object getBehaviour() {
+		return behaviour;
+	}
+
+	public void setSaveProgress(bo
