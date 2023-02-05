@@ -79,4 +79,7 @@ public class BehaviourSerializer {
 	}
 
 	public void setLoadProgress(boolean loadProgress) {
-		this.loadProgress
+		this.loadProgress = loadProgress;
+	}
+	
+}
