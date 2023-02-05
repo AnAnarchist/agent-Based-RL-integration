@@ -15,4 +15,7 @@ import rl.component.Action;
 
 public class Sarsa implements AlgorithmRL {
 
-	BehaviourSerializer s
+	BehaviourSerializer serializer = new BehaviourSerializer();
+	AlgorithmParameter parameters = new AlgorithmParameter();
+
+	private Random ra
