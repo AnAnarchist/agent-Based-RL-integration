@@ -18,4 +18,8 @@ public class Sarsa implements AlgorithmRL {
 	BehaviourSerializer serializer = new BehaviourSerializer();
 	AlgorithmParameter parameters = new AlgorithmParameter();
 
-	private Random ra
+	private Random randomEGreedy = new Random();
+
+	private Map<String, Map<Action, Double>> q = new HashMap<>();
+
+	private String previousState 
