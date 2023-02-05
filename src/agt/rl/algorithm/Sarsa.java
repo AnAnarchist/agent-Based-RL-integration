@@ -9,4 +9,10 @@ import java.util.Set;
 
 import jason.asSemantics.Agent;
 import jason.asSyntax.Literal;
-import jason.asSynt
+import jason.asSyntax.Term;
+import rl.beliefbase.BeliefBaseRL;
+import rl.component.Action;
+
+public class Sarsa implements AlgorithmRL {
+
+	BehaviourSerializer s
