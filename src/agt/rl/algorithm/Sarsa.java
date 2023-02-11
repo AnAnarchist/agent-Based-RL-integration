@@ -22,4 +22,9 @@ public class Sarsa implements AlgorithmRL {
 
 	private Map<String, Map<Action, Double>> q = new HashMap<>();
 
-	private String previousState 
+	private String previousState = null;
+	private Action previousAction = null;
+
+	@SuppressWarnings("unchecked")
+	public Sarsa() {
+		if (serializer.getBehaviour
