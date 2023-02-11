@@ -33,4 +33,6 @@ public class Sarsa implements AlgorithmRL {
 	}
 
 	@Override
-	public double expectedRe
+	public double expectedReturn(Set<Action> action, Set<Literal> observation) {
+		String state = observationToState(observation);
+		Map<Action, Double> valueFun
