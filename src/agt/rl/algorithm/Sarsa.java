@@ -27,4 +27,10 @@ public class Sarsa implements AlgorithmRL {
 
 	@SuppressWarnings("unchecked")
 	public Sarsa() {
-		if (serializer.getBehaviour
+		if (serializer.getBehaviour() != null) {
+			q = (Map<String, Map<Action, Double>>) serializer.getBehaviour();
+		}
+	}
+
+	@Override
+	public double expectedRe
