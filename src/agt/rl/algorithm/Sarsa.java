@@ -35,4 +35,7 @@ public class Sarsa implements AlgorithmRL {
 	@Override
 	public double expectedReturn(Set<Action> action, Set<Literal> observation) {
 		String state = observationToState(observation);
-		Map<Action, Double> valueFun
+		Map<Action, Double> valueFunctionState = q.get(state);
+		if (valueFunctionState != null) {
+			List<Action> actions = Action.discretizeAction(action);
+			Action
