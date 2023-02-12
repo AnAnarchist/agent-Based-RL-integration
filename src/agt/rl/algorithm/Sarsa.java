@@ -49,4 +49,8 @@ public class Sarsa implements AlgorithmRL {
 
 	@Override
 	public Action nextAction(Map<Term, Term> parameter, Set<Action> action, Set<Literal> observation, double reward,
-			b
+			boolean isTerminal) {
+
+		parameters.updateParameters(parameter);
+
+		String state = observationToState(observa
