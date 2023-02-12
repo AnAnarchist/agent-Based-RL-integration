@@ -40,4 +40,11 @@ public class Sarsa implements AlgorithmRL {
 			List<Action> actions = Action.discretizeAction(action);
 			Action selectedAction = selectAction(state, actions);
 			if (valueFunctionState.containsKey(selectedAction)) {
-				double expecterReward
+				double expecterReward = valueFunctionState.get(selectedAction);
+				return expecterReward;
+			}
+		}
+		return parameters.getInitialActionValue();
+	}
+
+	@Ove
