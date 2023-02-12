@@ -53,4 +53,8 @@ public class Sarsa implements AlgorithmRL {
 
 		parameters.updateParameters(parameter);
 
-		String state = observationToState(observa
+		String state = observationToState(observation);
+		List<Action> actions = Action.discretizeAction(action);
+		addNewActionToQ(state, actions);
+
+		Action selectedAction = sele
