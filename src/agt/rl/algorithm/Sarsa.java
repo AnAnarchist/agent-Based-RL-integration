@@ -60,4 +60,7 @@ public class Sarsa implements AlgorithmRL {
 		Action selectedAction = selectAction(state, actions);
 
 		if (!parameters.getPolicy().equals(AlgorithmParameter.ONLY_EXPLOIT_POLICY) &&
-					previousState != null && p
+					previousState != null && previousAction != null) {
+			double qSA = q.get(previousState).get(previousAction);
+			double qS1A1 = q.get(state).get(selectedAction);
+			dou
