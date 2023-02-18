@@ -57,4 +57,7 @@ public class Sarsa implements AlgorithmRL {
 		List<Action> actions = Action.discretizeAction(action);
 		addNewActionToQ(state, actions);
 
-		Action selectedAction = sele
+		Action selectedAction = selectAction(state, actions);
+
+		if (!parameters.getPolicy().equals(AlgorithmParameter.ONLY_EXPLOIT_POLICY) &&
+					previousState != null && p
