@@ -67,4 +67,9 @@ public class Sarsa implements AlgorithmRL {
 			q.get(previousState).put(previousAction, q1);
 		}
 
-		
+		previousState = state;
+		previousAction = selectedAction;
+
+		if (isTerminal) {
+			previousState = null;
+			previousAction = null;
