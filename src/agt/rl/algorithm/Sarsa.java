@@ -83,4 +83,8 @@ public class Sarsa implements AlgorithmRL {
 
 	private Action selectAction(String state, List<Action> actions) {
 		if (parameters.getPolicy().equals(AlgorithmParameter.EGREEDY_POLICY)
-				&& randomEGreedy.nextDouble() < parameters.getEpsilon()
+				&& randomEGreedy.nextDouble() < parameters.getEpsilon()) {
+			int randomSelected = randomEGreedy.nextInt(actions.size());
+			return actions.get(randomSelected);
+		}
+		Action sele
