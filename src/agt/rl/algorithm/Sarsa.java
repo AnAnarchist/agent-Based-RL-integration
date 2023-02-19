@@ -73,3 +73,12 @@ public class Sarsa implements AlgorithmRL {
 		if (isTerminal) {
 			previousState = null;
 			previousAction = null;
+
+			parameters.episodeEnd();
+			serializer.episodeEnd(q);
+		}
+
+		return selectedAction;
+	}
+
+	private Action selectAction(String state, 
