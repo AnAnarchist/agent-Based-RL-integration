@@ -87,4 +87,6 @@ public class Sarsa implements AlgorithmRL {
 			int randomSelected = randomEGreedy.nextInt(actions.size());
 			return actions.get(randomSelected);
 		}
-		Action sele
+		Action selectedAction = null;
+		double actionValue = -Double.MAX_VALUE;
+		for (Entry<Action, Double> action : q.get(state).entrySet()) {
