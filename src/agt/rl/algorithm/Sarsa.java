@@ -90,3 +90,9 @@ public class Sarsa implements AlgorithmRL {
 		Action selectedAction = null;
 		double actionValue = -Double.MAX_VALUE;
 		for (Entry<Action, Double> action : q.get(state).entrySet()) {
+			if (action.getValue() > actionValue) {
+				selectedAction = action.getKey();
+				actionValue = action.getValue();
+			}
+		}
+		retur
