@@ -95,4 +95,8 @@ public class Sarsa implements AlgorithmRL {
 				actionValue = action.getValue();
 			}
 		}
-		retur
+		return selectedAction;
+	}
+
+	private void addNewActionToQ(String state, List<Action> actions) {
+		Map<Action, Double> actionValue = new HashMap<>
