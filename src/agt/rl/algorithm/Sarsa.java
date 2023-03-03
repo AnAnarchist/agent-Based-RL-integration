@@ -99,4 +99,9 @@ public class Sarsa implements AlgorithmRL {
 	}
 
 	private void addNewActionToQ(String state, List<Action> actions) {
-		Map<Action, Double> actionValue = new HashMap<>
+		Map<Action, Double> actionValue = new HashMap<>();
+		if (q.containsKey(state)) {
+			actionValue = q.get(state);
+		}
+		for (Action action : actions) {
+			if (!actionValue.containsKey(ac
