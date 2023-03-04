@@ -111,4 +111,8 @@ public class Sarsa implements AlgorithmRL {
 		q.put(state, actionValue);
 	}
 
-	private String observationToState(Set<Li
+	private String observationToState(Set<Literal> observations) {
+		String state = "";
+		for (Literal observation : observations) {
+			state += observation.toString();
+		
