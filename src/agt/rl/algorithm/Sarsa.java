@@ -104,4 +104,11 @@ public class Sarsa implements AlgorithmRL {
 			actionValue = q.get(state);
 		}
 		for (Action action : actions) {
-			if (!actionValue.containsKey(ac
+			if (!actionValue.containsKey(action)) {
+				actionValue.put(action, parameters.getInitialActionValue());
+			}
+		}
+		q.put(state, actionValue);
+	}
+
+	private String observationToState(Set<Li
