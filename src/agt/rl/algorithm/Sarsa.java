@@ -115,4 +115,11 @@ public class Sarsa implements AlgorithmRL {
 		String state = "";
 		for (Literal observation : observations) {
 			state += observation.toString();
-		
+		}
+		return state;
+	}
+
+	@Override
+	public void initialize(Agent agent, BeliefBaseRL bb) {}
+
+}
