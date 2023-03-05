@@ -5,4 +5,5 @@ public class Reinforce extends TensorFlowAgent{
 		super(goal);
 	}
 
-	prote
+	protected String getMethod() { return "reinforce"; }
+}
