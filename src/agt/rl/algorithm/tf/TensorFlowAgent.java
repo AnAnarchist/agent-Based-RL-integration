@@ -10,3 +10,7 @@ import jason.asSyntax.Term;
 import rl.algorithm.AlgorithmRL;
 import rl.algorithm.tf.rest.ActionRest;
 import rl.algorithm.tf.rest.EnvironmentRest;
+import rl.algorithm.tf.rest.StateRest;
+import rl.beliefbase.BeliefBaseRL;
+import rl.component.Action;
+import rl.component.Ob
