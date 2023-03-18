@@ -24,4 +24,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public abs
+public abstract class TensorFlowAgent implements AlgorithmRL{
+	
+	public static String TARGET = "http://localhost:5002/agent/";
+	public static
