@@ -29,4 +29,9 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	public static String TARGET = "http://localhost:5002/agent/";
 	public static String COLLECT_POLICY = "/next_train_action";
 	public static String GREEDY_POLICY = "/next_best_action";
-	public st
+	public static String POLICY_FUNCTOR = "policy";
+	public static String GREEDY_POLICY_FUNCTOR = "greedy";
+	
+	public static int N_ACTION_REAL = 10;
+	
+	protected abstract 
