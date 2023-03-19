@@ -45,4 +45,10 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	
 	private double preActionReward = 0;
 	
-	
+	public TensorFlowAgent(String goal) {
+		super();
+		this.goal = goal;
+	}
+
+	@Override
+	public Action nextAction(Map<Term, Term> para
