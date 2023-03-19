@@ -34,4 +34,8 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	
 	public static int N_ACTION_REAL = 10;
 	
-	protected abstract 
+	protected abstract String getMethod();
+	private String goal;
+	
+	private List<Observation> observations;
+	private Map<String, Observation> observationsNameMap = new Hash
