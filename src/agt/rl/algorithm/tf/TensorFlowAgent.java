@@ -38,4 +38,11 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	private String goal;
 	
 	private List<Observation> observations;
-	private Map<String, Observation> observationsNameMap = new Hash
+	private Map<String, Observation> observationsNameMap = new HashMap<>();
+	private List<Action> actions;
+	
+	private Client client = ClientBuilder.newClient();
+	
+	private double preActionReward = 0;
+	
+	
