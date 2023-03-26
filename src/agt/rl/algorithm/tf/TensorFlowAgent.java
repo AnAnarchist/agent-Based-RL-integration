@@ -54,4 +54,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	public Action nextAction(Map<Term, Term> parameters, Set<Action> action, Set<Literal> currentObservation,
 			double reward, boolean isTerminal) {
 		
-		String policy =
+		String policy = COLLECT_POLICY;
+		for(Entry<Term, Term> parameter : parameters.entrySet()) {
+			if(parameter.getKey().toString().equals(POLICY_FUNCTOR)) {
+			
