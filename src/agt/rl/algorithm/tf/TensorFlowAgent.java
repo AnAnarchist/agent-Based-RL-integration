@@ -51,4 +51,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	}
 
 	@Override
-	public Action nextAction(Map<Term, Term> para
+	public Action nextAction(Map<Term, Term> parameters, Set<Action> action, Set<Literal> currentObservation,
+			double reward, boolean isTerminal) {
+		
+		String policy =
