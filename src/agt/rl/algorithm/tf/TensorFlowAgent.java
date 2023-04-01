@@ -57,4 +57,10 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 		String policy = COLLECT_POLICY;
 		for(Entry<Term, Term> parameter : parameters.entrySet()) {
 			if(parameter.getKey().toString().equals(POLICY_FUNCTOR)) {
-			
+				if(parameter.getValue().toString().equals(GREEDY_POLICY_FUNCTOR)) {
+					policy = GREEDY_POLICY;
+				}
+			}
+		}
+		
+		List
