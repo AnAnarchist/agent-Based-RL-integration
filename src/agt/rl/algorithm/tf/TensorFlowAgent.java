@@ -63,4 +63,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 			}
 		}
 		
-		List
+		List<Double> currentState = observationsToTF(currentObservation);
+		
+        StateRest<Double> state = new StateRest<>();
+        state.setState(
