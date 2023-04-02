@@ -71,4 +71,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         state.setReward(preActionReward);
         state.setIs_terminal(isTerminal);
         
-    
+        preActionReward = reward;
+
+        Response response = client.target(TARGET + goal + policy)
+                .reque
