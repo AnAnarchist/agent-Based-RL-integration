@@ -77,4 +77,6 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(state, MediaType.APPLICATION_JSON));
 
-        @SuppressWarnings
+        @SuppressWarnings("unchecked")
+		ActionRest<List<Integer>> actionRest = response.readEntity(ActionRest.class);
+		return actions.get(actionRest.
