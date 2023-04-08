@@ -74,4 +74,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         preActionReward = reward;
 
         Response response = client.target(TARGET + goal + policy)
-                .reque
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(state, MediaType.APPLICATION_JSON));
+
+        @SuppressWarnings
