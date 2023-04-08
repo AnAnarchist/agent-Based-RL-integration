@@ -79,4 +79,10 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 
         @SuppressWarnings("unchecked")
 		ActionRest<List<Integer>> actionRest = response.readEntity(ActionRest.class);
-		return actions.get(actionRest.
+		return actions.get(actionRest.getAction().get(0).get(0));
+	}
+
+	@Override
+	public double expectedReturn(Set<Action> action, Set<Literal> observation) {
+		// TODO Auto-generated method stub
+		re
