@@ -85,4 +85,10 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	@Override
 	public double expectedReturn(Set<Action> action, Set<Literal> observation) {
 		// TODO Auto-generated method stub
-		re
+		return 0;
+	}
+
+	@Override
+	public void initialize(Agent agent, BeliefBaseRL bb) {
+		
+		EnvironmentRest<Integer, Double> environment = new Environ
