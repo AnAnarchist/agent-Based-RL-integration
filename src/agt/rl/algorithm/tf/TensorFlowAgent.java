@@ -91,4 +91,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	@Override
 	public void initialize(Agent agent, BeliefBaseRL bb) {
 		
-		EnvironmentRest<Integer, Double> environment = new Environ
+		EnvironmentRest<Integer, Double> environment = new EnvironmentRest<>();
+		environment.setAgent_type(getMethod());
+		//actions specification
+		actions = Action.discretizeActio
