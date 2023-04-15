@@ -97,4 +97,9 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 		actions = Action.discretizeAction(PlanLibraryRL.getAllActionsForGoal(agent, goal));
         
         environment.setA_type("int");
-        List<Integer> a_shape = new Ar
+        List<Integer> a_shape = new ArrayList<>();
+    	List<Integer> a_min = new ArrayList<>();
+    	List<Integer> a_max = new ArrayList<>();
+    	a_shape.add(1);
+    	a_min.add(0);
+ 
