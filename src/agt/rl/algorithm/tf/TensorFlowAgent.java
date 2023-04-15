@@ -94,4 +94,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 		EnvironmentRest<Integer, Double> environment = new EnvironmentRest<>();
 		environment.setAgent_type(getMethod());
 		//actions specification
-		actions = Action.discretizeActio
+		actions = Action.discretizeAction(PlanLibraryRL.getAllActionsForGoal(agent, goal));
+        
+        environment.setA_type("int");
+        List<Integer> a_shape = new Ar
