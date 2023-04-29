@@ -105,4 +105,8 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
     	a_max.add(actions.size() - 1);
     	environment.setA_shape(a_shape);
     	environment.setA_min(a_min);
-    	environment.setA_max(
+    	environment.setA_max(a_max);
+        
+        //observations specification
+		Set<Term> observationsTerm = bb.getObservedList(goal);
+		observations = new ArrayList<>();
