@@ -110,3 +110,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         //observations specification
 		Set<Term> observationsTerm = bb.getObservedList(goal);
 		observations = new ArrayList<>();
+		for(Term observation : observationsTerm) {
+			Observation o = new Observation(observation);
+			observations.add(o);
+			observations
