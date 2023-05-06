@@ -121,4 +121,8 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
     	List<Double> o_min = new ArrayList<>();
     	List<Double> o_max = new ArrayList<>();
 		for(Observation observation : observations) {
-			if(o
+			if(observation.getParameters().size() == 0) {
+				o_min.add(0.0);
+    			o_max.add(1.0);
+			} else
+        	for(ObservationParameter pa
