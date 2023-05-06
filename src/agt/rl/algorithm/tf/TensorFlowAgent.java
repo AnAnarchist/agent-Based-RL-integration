@@ -113,4 +113,9 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 		for(Term observation : observationsTerm) {
 			Observation o = new Observation(observation);
 			observations.add(o);
-			observations
+			observationsNameMap.put(o.getName(), o);
+		}
+        
+		environment.setO_type("double");
+        List<Integer> o_shape = new ArrayList<>();
+    	List<D
