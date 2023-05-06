@@ -125,4 +125,6 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 				o_min.add(0.0);
     			o_max.add(1.0);
 			} else
-        	for(ObservationParameter pa
+        	for(ObservationParameter param : observation.getParameters()) {
+        		if(param.getType() == Observation.ParameterType.REAL) {
+        			o_min.add((double) param.getMin())
