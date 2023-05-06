@@ -118,4 +118,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         
 		environment.setO_type("double");
         List<Integer> o_shape = new ArrayList<>();
-    	List<D
+    	List<Double> o_min = new ArrayList<>();
+    	List<Double> o_max = new ArrayList<>();
+		for(Observation observation : observations) {
+			if(o
