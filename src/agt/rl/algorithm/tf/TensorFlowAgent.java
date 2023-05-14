@@ -129,4 +129,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         		if(param.getType() == Observation.ParameterType.REAL) {
         			o_min.add((double) param.getMin());
         			o_max.add((double) param.getMax());
-        		} else if(param.getType() == Observation.ParameterType.INT) 
+        		} else if(param.getType() == Observation.ParameterType.INT) {
+        			o_min.add((double) param.getMin());
+        			o_max.add((double) param.getMax());
+        		} else if(param.getType(
