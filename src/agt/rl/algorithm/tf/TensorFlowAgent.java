@@ -136,4 +136,9 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         			o_min.add(0.0);
         			o_max.add((double) param.getSet().size() - 1);
         		}
-        	
+        	}
+    	}
+		o_shape.add(o_min.size());
+		environment.setO_shape(o_shape);
+    	environment.setO_min(o_min);
+    	environment.setO_max(o_max);
