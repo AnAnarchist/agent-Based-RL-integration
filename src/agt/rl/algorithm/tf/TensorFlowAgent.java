@@ -147,4 +147,6 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         environment.setInit_state(observationsToTF(bb.getCurrentObservation(goal)));
 		
 		//parameters
-		Map<T
+		Map<Term, Term> parameters = bb.getRlParameter();
+		Map<String, String> parametersString = new HashMap<>();
+		for(Entry<Term, Term> par
