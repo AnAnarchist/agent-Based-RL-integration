@@ -149,4 +149,7 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 		//parameters
 		Map<Term, Term> parameters = bb.getRlParameter();
 		Map<String, String> parametersString = new HashMap<>();
-		for(Entry<Term, Term> par
+		for(Entry<Term, Term> param : parameters.entrySet()) {
+			parametersString.put(param.getKey().toString(), param.getValue().toString());
+		}
+		environment.setParam
