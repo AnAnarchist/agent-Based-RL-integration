@@ -152,4 +152,9 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 		for(Entry<Term, Term> param : parameters.entrySet()) {
 			parametersString.put(param.getKey().toString(), param.getValue().toString());
 		}
-		environment.setParam
+		environment.setParameters(parametersString);
+		
+		
+		client.target(TARGET + goal)
+        .request(MediaType.APPLICATION_JSON)
+        .post(Entity
