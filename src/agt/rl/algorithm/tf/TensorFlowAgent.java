@@ -142,3 +142,9 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 		environment.setO_shape(o_shape);
     	environment.setO_min(o_min);
     	environment.setO_max(o_max);
+		
+    	//initial state
+        environment.setInit_state(observationsToTF(bb.getCurrentObservation(goal)));
+		
+		//parameters
+		Map<T
