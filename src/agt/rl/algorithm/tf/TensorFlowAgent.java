@@ -157,4 +157,8 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 		
 		client.target(TARGET + goal)
         .request(MediaType.APPLICATION_JSON)
-        .post(Entity
+        .post(Entity.entity(environment, MediaType.APPLICATION_JSON));
+		
+	}
+	
+	protected List<Double> observationsToTF(Set<Literal> observationsLitera
