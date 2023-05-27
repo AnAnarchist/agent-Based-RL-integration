@@ -164,4 +164,6 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 	protected List<Double> observationsToTF(Set<Literal> observationsLiteral){
 		List<Observation> currentGround = new ArrayList<>();
 		for(Term observation : observationsLiteral) {
-			String
+			String observationName = ((Literal) observation).getFunctor();
+			Observation o = observationsNameMap.get(observationName);
+			o.setParamValues(
