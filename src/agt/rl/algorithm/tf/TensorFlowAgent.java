@@ -171,4 +171,6 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
 				currentGround.add(o);
 			}
 		}
-        List<Double
+        List<Double> stateTF = new ArrayList<>();
+        for(Observation observation : observations) {
+        	if(observation.getParameters().size()
