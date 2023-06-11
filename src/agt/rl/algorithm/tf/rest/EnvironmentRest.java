@@ -100,3 +100,8 @@ public class EnvironmentRest<ActionType, ObservationType> {
 	public Map<String, String> getParameters() {
 		return parameters;
 	}
+
+	public void setParameters(Map<String, String> parameters) {
+		this.parameters = parameters;
+	}
+}
