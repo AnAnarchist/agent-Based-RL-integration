@@ -190,4 +190,6 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         		}
         	}
         }
-        return state
+        return stateTF;
+	} 
+}
