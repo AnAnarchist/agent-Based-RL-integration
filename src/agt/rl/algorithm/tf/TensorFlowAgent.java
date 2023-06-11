@@ -186,3 +186,8 @@ public abstract class TensorFlowAgent implements AlgorithmRL{
         		} else if(param.getType() == Observation.ParameterType.INT) {
         			stateTF.add(Double.parseDouble(param.getValue()));
         		} else if(param.getType() == Observation.ParameterType.SET) {
+        			stateTF.add((double) param.getSet().indexOf(param.getValue()));
+        		}
+        	}
+        }
+        return state
