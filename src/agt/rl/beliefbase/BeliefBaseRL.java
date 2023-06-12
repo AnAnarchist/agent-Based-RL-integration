@@ -73,3 +73,88 @@ public class BeliefBaseRL extends DefaultBeliefBase {
 					System.out.println("Goal " + goal + " tracks all");
 				} else if (observe.isList()) {
 					((ListTerm) observe).forEach(o -> {
+						String observationFunctor = o.toString();
+						if(observationFunctor.contains("(")) {
+							observationFunctor = observationFunctor.substring(0, observationFunctor.indexOf("("));
+						}
+						putMapSet(goalObservationTerm, goal, o);
+						putMapSet(goalObservation, goal, observationFunctor);
+						System.out.println("Observe " + observationFunctor + " for goal " + goal);
+					});
+				} else {
+					String observationFunctor = observe.toString();
+					if(observationFunctor.contains("(")) {
+						observationFunctor = observationFunctor.substring(0, observationFunctor.indexOf("("));
+					}
+					putMapSet(goalObservationTerm, goal, observe);
+					putMapSet(goalObservation, goal, observationFunctor);
+					System.out.println("Observe " + observationFunctor + " for goal " + goal);
+				}
+			}
+		} else if (functor.equals(ALGORITHM_FUNCTOR)) {
+			if (belief.getArity() == 2) {
+				String goal = belief.getTerm(0).toString();
+				String algorithm = belief.getTerm(1).toString();
+				if(!rl.containsKey(goal)) {
+					if(algorithm.equals(DQN_ID)) {
+						rl.put(goal, new Dqn(goal));
+					} else if(algorithm.equals(REINFORCE_ID)) {
+						rl.put(goal, new Reinforce(goal));
+					} else if(algorithm.equals(SARSA_ID)) {
+						rl.put(goal, new Sarsa());
+					} else {
+						rl.put(goal, new Sarsa());
+					}
+				}
+			}
+		}
+	}
+
+	private <Key, Value> void putMapSet(Map<Key, Set<Value>> map, Key key, Value value) {
+		if (!map.containsKey(key)) {
+			map.put(key, new HashSet<>());
+		}
+		map.get(key).add(value);
+	}
+	
+	public Set<Literal> getCurrentObservation(String goal) {
+		Set<Literal> currentObservation = new HashSet<>();// goal, current observation list
+		Set<String> observedByThisGoal = goalObservation.get(goal);
+		this.forEach(belief -> {
+			String functor = belief.getFunctor();
+			Literal beliefCopy = belief.copy();
+			beliefCopy.clearAnnots();
+			if (trackAll.contains(goal)) {
+				currentObservation.add(beliefCopy);
+			} else if (observedByThisGoal.contains(functor)) {
+				currentObservation.add(beliefCopy);
+			}
+		});
+		return currentObservation;
+	}
+	
+	public Set<Term> getObservedList(String goal){
+		return goalObservationTerm.get(goal);
+	}
+	
+	public AlgorithmRL getRLInstance(String goal) {
+		if(!rlActive.contains(goal)) {
+			rl.get(goal).initialize(agentReference, this);
+			rlActive.add(goal);
+		}
+		return rl.get(goal);
+	}
+
+	public Map<Term, Term> getRlParameter() {
+		return parameter;
+	}
+
+	public double getCurrentReward(String goal) {
+		return MotivationalRule.getCurrentReward(goal, agentReference, this);
+	}
+
+	public boolean isCurrentStateTerminal(String goal) {
+		return TerminalRule.isCurrentStateTerminal(goal, agentReference, this);
+	}
+
+}
