@@ -20,4 +20,10 @@ public class MotivationalRule {
 
 	public static double getCurrentReward(String goal, Agent agentReference, BeliefBase bb) {
 		double totalReward = 0;
-		Iterator<Literal> reward = bb.getCandidateBel
+		Iterator<Literal> reward = bb.getCandidateBeliefs(REWARD_INDICATOR);
+
+		while (reward.hasNext()) {
+			Literal rw = reward.next();
+			if (!rw.isRule()) {
+				if (rw.getArity() == 2) {
+					Term litG
