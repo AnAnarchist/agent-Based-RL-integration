@@ -18,4 +18,6 @@ public class MotivationalRule {
 
 	public static final PredicateIndicator REWARD_INDICATOR = new PredicateIndicator("rl_reward", 2);
 
-	public static double getC
+	public static double getCurrentReward(String goal, Agent agentReference, BeliefBase bb) {
+		double totalReward = 0;
+		Iterator<Literal> reward = bb.getCandidateBel
