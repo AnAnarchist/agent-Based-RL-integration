@@ -16,4 +16,6 @@ import jason.bb.BeliefBase;
 
 public class MotivationalRule {
 
-	public stati
+	public static final PredicateIndicator REWARD_INDICATOR = new PredicateIndicator("rl_reward", 2);
+
+	public static double getC
