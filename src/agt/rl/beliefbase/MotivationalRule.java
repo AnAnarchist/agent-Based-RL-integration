@@ -26,4 +26,7 @@ public class MotivationalRule {
 			Literal rw = reward.next();
 			if (!rw.isRule()) {
 				if (rw.getArity() == 2) {
-					Term litG
+					Term litGoal = rw.getTerm(0);
+					Term litReward = rw.getTerm(1);
+					if (litGoal.isGround() && litReward.isNumeric()) {
+						if (litGoal.toString().e
