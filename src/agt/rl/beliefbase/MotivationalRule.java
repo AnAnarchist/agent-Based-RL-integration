@@ -29,4 +29,7 @@ public class MotivationalRule {
 					Term litGoal = rw.getTerm(0);
 					Term litReward = rw.getTerm(1);
 					if (litGoal.isGround() && litReward.isNumeric()) {
-						if (litGoal.toString().e
+						if (litGoal.toString().equals(goal)) {
+							try {
+								totalReward += ((NumberTerm) litReward).solve();
+							} catch (NoValueException e) {}
