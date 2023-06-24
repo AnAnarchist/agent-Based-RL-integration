@@ -33,3 +33,10 @@ public class MotivationalRule {
 							try {
 								totalReward += ((NumberTerm) litReward).solve();
 							} catch (NoValueException e) {}
+						}
+					}
+				}
+			} else {
+				Rule rewardRule = (Rule) rw;
+				Literal head = rewardRule.getHead();
+				if (head.ge
