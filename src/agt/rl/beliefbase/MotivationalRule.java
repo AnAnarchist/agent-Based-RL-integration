@@ -39,4 +39,8 @@ public class MotivationalRule {
 			} else {
 				Rule rewardRule = (Rule) rw;
 				Literal head = rewardRule.getHead();
-				if (head.ge
+				if (head.getArity() == 2) {
+					Term ruleGoal = head.getTerm(0);
+					Term ruleReward = head.getTerm(1);
+
+					String goalValue = nul
