@@ -49,4 +49,10 @@ public class MotivationalRule {
 						goalValue = ruleGoal.toString();
 					}
 					if (ruleReward.isNumeric()) {
-				
+						rewardValue = ruleReward.toString();
+					}
+
+					Unifier unifierGoal = new Unifier();
+
+					VarTerm goalVar = null;
+					VarTerm rewardVar 
