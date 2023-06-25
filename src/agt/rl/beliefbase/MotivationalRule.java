@@ -43,4 +43,10 @@ public class MotivationalRule {
 					Term ruleGoal = head.getTerm(0);
 					Term ruleReward = head.getTerm(1);
 
-					String goalValue = nul
+					String goalValue = null;
+					String rewardValue = null;
+					if (ruleGoal.isGround()) {
+						goalValue = ruleGoal.toString();
+					}
+					if (ruleReward.isNumeric()) {
+				
