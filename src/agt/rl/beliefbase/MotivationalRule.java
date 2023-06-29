@@ -55,4 +55,7 @@ public class MotivationalRule {
 					Unifier unifierGoal = new Unifier();
 
 					VarTerm goalVar = null;
-					VarTerm rewardVar 
+					VarTerm rewardVar = null;
+					if (ruleGoal.isVar()) {
+						goalVar = (VarTerm) ruleGoal;
+						unifierGoal.bind(goalVar, ASSyntax.createAtom(goal))
