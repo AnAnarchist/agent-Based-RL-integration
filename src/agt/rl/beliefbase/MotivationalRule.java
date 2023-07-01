@@ -70,4 +70,7 @@ public class MotivationalRule {
 							rewardValue != null && candidateReward.hasNext()) {
 						if (goalValue.equals(goal)) {
 							try {
-								tota
+								totalReward += Integer.parseInt(rewardValue);
+							} catch (Exception e) {
+								if (rewardValue.length() > 2) {
+									rewardValue = rew
