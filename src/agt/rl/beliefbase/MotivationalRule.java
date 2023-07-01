@@ -64,4 +64,6 @@ public class MotivationalRule {
 						rewardVar = (VarTerm) ruleReward;
 					}
 
-					Iterator<Unifier> candidateReward = rewardRule.getBo
+					Iterator<Unifier> candidateReward = rewardRule.getBody().logicalConsequence(agentReference, unifierGoal);
+					//if rule hasn't variable in head and is valid
+					if (candidateReward != nu
