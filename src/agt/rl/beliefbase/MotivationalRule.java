@@ -73,4 +73,6 @@ public class MotivationalRule {
 								totalReward += Integer.parseInt(rewardValue);
 							} catch (Exception e) {
 								if (rewardValue.length() > 2) {
-									rewardValue = rew
+									rewardValue = rewardValue.substring(1, rewardValue.length() - 1);
+									try {
+										totalReward += Integer.parseInt(rewardValue);
