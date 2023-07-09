@@ -76,3 +76,10 @@ public class MotivationalRule {
 									rewardValue = rewardValue.substring(1, rewardValue.length() - 1);
 									try {
 										totalReward += Integer.parseInt(rewardValue);
+									} catch (Exception e2) {
+									}
+								}
+							}
+						}
+					} else {
+						//try to bind goal and/or reward var
