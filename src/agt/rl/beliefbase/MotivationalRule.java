@@ -82,4 +82,7 @@ public class MotivationalRule {
 							}
 						}
 					} else {
-						//try to bind goal and/or reward var
+						//try to bind goal and/or reward variables
+						if (candidateReward != null)
+							while (candidateReward.hasNext()) {
+								Unifier rewardUnifier = candid
