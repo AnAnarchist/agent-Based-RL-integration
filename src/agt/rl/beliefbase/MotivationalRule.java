@@ -85,4 +85,8 @@ public class MotivationalRule {
 						//try to bind goal and/or reward variables
 						if (candidateReward != null)
 							while (candidateReward.hasNext()) {
-								Unifier rewardUnifier = candid
+								Unifier rewardUnifier = candidateReward.next();
+								if (goalVar != null) {
+									Term t = rewardUnifier.get(goalVar);
+									if (t.isGround()) {
+										goalVal
