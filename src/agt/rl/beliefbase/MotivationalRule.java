@@ -89,4 +89,9 @@ public class MotivationalRule {
 								if (goalVar != null) {
 									Term t = rewardUnifier.get(goalVar);
 									if (t.isGround()) {
-										goalVal
+										goalValue = t.toString();
+									}
+								}
+								if (rewardVar != null) {
+									Term t = rewardUnifier.get(rewardVar);
+				
