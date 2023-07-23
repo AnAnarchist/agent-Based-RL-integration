@@ -99,4 +99,8 @@ public class MotivationalRule {
 									}
 								}
 
-								if (goalValue != null && reward
+								if (goalValue != null && rewardValue != null) {
+									if (goalValue.equals(goal)) {
+										totalReward += Double.parseDouble(rewardValue);
+									}
+	
