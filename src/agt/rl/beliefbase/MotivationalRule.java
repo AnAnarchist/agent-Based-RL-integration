@@ -94,4 +94,9 @@ public class MotivationalRule {
 								}
 								if (rewardVar != null) {
 									Term t = rewardUnifier.get(rewardVar);
-				
+									if (t.isNumeric()) {
+										rewardValue = t.toString();
+									}
+								}
+
+								if (goalValue != null && reward
