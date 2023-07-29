@@ -109,3 +109,13 @@ public class MotivationalRule {
 								}
 								if (rewardVar != null) {
 									rewardValue = null;
+								}
+							}
+					}
+				}
+			}
+		}
+
+		return totalReward;
+	}
+}
