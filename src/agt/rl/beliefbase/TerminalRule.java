@@ -12,4 +12,6 @@ import jason.asSyntax.Term;
 import jason.asSyntax.VarTerm;
 import jason.bb.BeliefBase;
 
-pub
+public class TerminalRule {
+	
+	public static final PredicateIndicator TERMINAL_INDICATOR = new PredicateIndicator("rl_terminal",
