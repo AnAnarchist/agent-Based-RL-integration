@@ -14,4 +14,7 @@ import jason.bb.BeliefBase;
 
 public class TerminalRule {
 	
-	public static final PredicateIndicator TERMINAL_INDICATOR = new PredicateIndicator("rl_terminal",
+	public static final PredicateIndicator TERMINAL_INDICATOR = new PredicateIndicator("rl_terminal", 1);
+	
+	public static boolean isCurrentStateTerminal(String goal, Agent agentReference, BeliefBase bb) {
+		Iterator<Literal> terminalCa
