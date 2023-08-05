@@ -19,4 +19,8 @@ public class TerminalRule {
 	public static boolean isCurrentStateTerminal(String goal, Agent agentReference, BeliefBase bb) {
 		Iterator<Literal> terminalCandidate = bb.getCandidateBeliefs(TERMINAL_INDICATOR);
 		if (terminalCandidate != null)
-			while (terminalCandidate.hasNext()) 
+			while (terminalCandidate.hasNext()) {
+				Literal terminal = terminalCandidate.next();
+				if (!terminal.isRule()) {
+					for (Term terminalGoal : terminal.getTerms()) {
+						if (ter
