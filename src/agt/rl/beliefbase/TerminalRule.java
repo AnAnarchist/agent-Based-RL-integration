@@ -23,4 +23,9 @@ public class TerminalRule {
 				Literal terminal = terminalCandidate.next();
 				if (!terminal.isRule()) {
 					for (Term terminalGoal : terminal.getTerms()) {
-						if (ter
+						if (terminalGoal.isGround() && terminalGoal.toString().equals(goal)) {
+							return true;
+						}
+					}
+				} else {
+					Rule terminalRul
