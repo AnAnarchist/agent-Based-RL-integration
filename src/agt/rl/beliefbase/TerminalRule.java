@@ -28,4 +28,8 @@ public class TerminalRule {
 						}
 					}
 				} else {
-					Rule terminalRul
+					Rule terminalRule = (Rule) terminal;
+					Term headGoal = terminalRule.getHead().getTerm(0);
+
+					Unifier unifierGoal = new Unifier();
+		
