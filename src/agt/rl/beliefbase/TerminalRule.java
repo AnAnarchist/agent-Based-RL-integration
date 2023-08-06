@@ -32,4 +32,6 @@ public class TerminalRule {
 					Term headGoal = terminalRule.getHead().getTerm(0);
 
 					Unifier unifierGoal = new Unifier();
-		
+					if (headGoal.isVar()) {
+						VarTerm goalVar = (VarTerm) headGoal;
+						unifierGoal.bind(goalVar, ASSyntax.cre
