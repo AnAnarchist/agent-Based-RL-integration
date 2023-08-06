@@ -34,4 +34,8 @@ public class TerminalRule {
 					Unifier unifierGoal = new Unifier();
 					if (headGoal.isVar()) {
 						VarTerm goalVar = (VarTerm) headGoal;
-						unifierGoal.bind(goalVar, ASSyntax.cre
+						unifierGoal.bind(goalVar, ASSyntax.createAtom(goal));
+					}
+
+					Iterator<Unifier> terminalRuleUnifier = terminalRule.getBody().logicalConsequence(agentReference,
+							unifierGoal
