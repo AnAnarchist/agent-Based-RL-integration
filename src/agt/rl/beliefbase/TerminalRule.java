@@ -38,4 +38,8 @@ public class TerminalRule {
 					}
 
 					Iterator<Unifier> terminalRuleUnifier = terminalRule.getBody().logicalConsequence(agentReference,
-							unifierGoal
+							unifierGoal);
+					if (terminalRuleUnifier.hasNext()) {
+						if (headGoal.isVar() || (headGoal.isGround() && headGoal.toString().equals(goal)))
+							return true;
+				
