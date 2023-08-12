@@ -42,4 +42,9 @@ public class TerminalRule {
 					if (terminalRuleUnifier.hasNext()) {
 						if (headGoal.isVar() || (headGoal.isGround() && headGoal.toString().equals(goal)))
 							return true;
-				
+					}
+				}
+			}
+		return false;
+	}
+}
