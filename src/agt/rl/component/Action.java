@@ -94,3 +94,40 @@ public class Action implements Serializable{
 								}
 							}
 							tmpSet.add(nextDiscrete);
+						}
+					}
+				} else if (param.getType().equals(ParameterType.INT)) {
+					for (int value = (int) param.getMin(); value < param.getMax(); value++) {
+						for (Action next : discreteSet) {
+							Action nextDiscrete = new Action(next);
+							for (ActionParameter paramToUpdate : nextDiscrete.getParameters()) {
+								if (paramToUpdate.equals(param)) {
+									paramToUpdate.setValue(String.valueOf(value));
+								}
+							}
+							tmpSet.add(nextDiscrete);
+						}
+					}
+				} else if (param.getType().equals(ParameterType.REAL)) {
+					double step = (param.getMax() - param.getMin()) / realStepForDiscretization;
+					for (double value = param.getMin(); value < param.getMax(); value += step) {
+						for (Action next : discreteSet) {
+							Action nextDiscrete = new Action(next);
+							for (ActionParameter paramToUpdate : nextDiscrete.getParameters()) {
+								if (paramToUpdate.equals(param)) {
+									paramToUpdate.setValue(String.valueOf(value));
+								}
+							}
+							tmpSet.add(nextDiscrete);
+						}
+					}
+				}
+
+				discreteSet = tmpSet;
+			}
+			discreteActions.addAll(discreteSet);
+		}
+
+		return discreteActions;
+	}
+}
