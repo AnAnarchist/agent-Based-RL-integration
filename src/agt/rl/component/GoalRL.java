@@ -9,4 +9,8 @@ public class GoalRL {
 		if(term.isGround()) {
 			goal = term.toString();
 		} else if (term.isVar()) {
-			goal = unifier.get
+			goal = unifier.get(term.toString()).toString();
+		}
+		return goal;
+	}
+}
