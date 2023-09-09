@@ -9,4 +9,8 @@ import jason.asSyntax.Literal;
 import jason.asSyntax.NumberTerm;
 import jason.asSyntax.Term;
 
-public cl
+public class Observation implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
+	public static final String PARAM_SET_FUNCTOR = "s
