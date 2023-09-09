@@ -17,4 +17,11 @@ public class Observation implements Serializable{
 	public static final String PARAM_REAL_FUNCTOR = "real";
 	public static final String PARAM_INT_FUNCTOR = "int";
 
-	public en
+	public enum ParameterType {
+	    SET, REAL, INT
+	}
+	
+	private final String name;
+	private final List<ObservationParameter> parameters;
+	
+	publ
