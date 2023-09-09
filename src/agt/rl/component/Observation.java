@@ -13,4 +13,8 @@ public class Observation implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	public static final String PARAM_SET_FUNCTOR = "s
+	public static final String PARAM_SET_FUNCTOR = "set";
+	public static final String PARAM_REAL_FUNCTOR = "real";
+	public static final String PARAM_INT_FUNCTOR = "int";
+
+	public en
