@@ -24,4 +24,7 @@ public class Observation implements Serializable{
 	private final String name;
 	private final List<ObservationParameter> parameters;
 	
-	publ
+	public Observation(Term observationTerm){
+		parameters = new ArrayList<>();
+		
+		Literal observation = (Literal) observationTer
