@@ -30,4 +30,7 @@ public class Observation implements Serializable{
 		Literal observation = (Literal) observationTerm;
 		name = observation.getFunctor();
 		for(Term param : observation.getTerms()) {
-			Literal paramTypeLit = (Literal) p
+			Literal paramTypeLit = (Literal) param;
+			String paramType = paramTypeLit.getFunctor();
+			if(paramType.equals(PARAM_SET_FUNCTOR)) {
+				List<String
