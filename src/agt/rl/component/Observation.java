@@ -35,4 +35,7 @@ public class Observation implements Serializable{
 			if(paramType.equals(PARAM_SET_FUNCTOR)) {
 				List<String> paramSet = new ArrayList<>();
 				for(Term paramElement : paramTypeLit.getTerms()) {
-					paramSet.add(paramElement.toString
+					paramSet.add(paramElement.toString());
+				}
+				parameters.add(new ObservationParameter(paramSet));
+			} else if(paramType.equals(PARAM_INT_FUNCTOR))
