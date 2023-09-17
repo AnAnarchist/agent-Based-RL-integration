@@ -41,4 +41,9 @@ public class Observation implements Serializable{
 			} else if(paramType.equals(PARAM_INT_FUNCTOR)) {
 				try {
 					int min = (int) ((NumberTerm)paramTypeLit.getTerm(0)).solve();
-					int max = (int) ((NumberTerm)paramTypeLit.getTerm(1)).solve(
+					int max = (int) ((NumberTerm)paramTypeLit.getTerm(1)).solve();
+					parameters.add(new ObservationParameter(min, max));
+				} catch (NoValueException e) {
+					e.printStackTrace();
+				}
+			} else 
