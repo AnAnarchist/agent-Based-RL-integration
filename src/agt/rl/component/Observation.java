@@ -46,4 +46,7 @@ public class Observation implements Serializable{
 				} catch (NoValueException e) {
 					e.printStackTrace();
 				}
-			} else 
+			} else if(paramType.equals(PARAM_REAL_FUNCTOR)) {
+				try {
+					double min = ((NumberTerm)paramTypeLit.getTerm(0)).solve();
+					double max = (
