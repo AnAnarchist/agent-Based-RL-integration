@@ -51,4 +51,12 @@ public class Observation implements Serializable{
 					double min = ((NumberTerm)paramTypeLit.getTerm(0)).solve();
 					double max = ((NumberTerm)paramTypeLit.getTerm(1)).solve();
 					parameters.add(new ObservationParameter(min, max));
-				} catch (NoValueException e
+				} catch (NoValueException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	public Observation(String name, List<ObservationParameter> parameters){
+		this.name = nam
