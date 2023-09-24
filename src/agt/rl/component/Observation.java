@@ -59,4 +59,13 @@ public class Observation implements Serializable{
 	}
 	
 	public Observation(String name, List<ObservationParameter> parameters){
-		this.name = nam
+		this.name = name;
+		this.parameters = parameters;
+	}
+	
+	public Observation(String name){
+		this.name = name;
+		this.parameters = null;
+	}
+	
+	public Observation(
