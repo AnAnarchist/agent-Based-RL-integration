@@ -68,4 +68,7 @@ public class Observation implements Serializable{
 		this.parameters = null;
 	}
 	
-	public Observation(
+	public Observation(Observation copy){
+		this.name = copy.name;
+		this.parameters = new ArrayList<>();
+		for(ObservationParameter param : co
