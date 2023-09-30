@@ -77,4 +77,7 @@ public class Observation implements Serializable{
 	}
 	
 	public String getName() { return name; }
-	public List<
+	public List<ObservationParameter> getParameters() { return parameters; }
+	
+	public void setParamValues(Term observationTerm) {
+		Literal observatio
