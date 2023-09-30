@@ -71,4 +71,10 @@ public class Observation implements Serializable{
 	public Observation(Observation copy){
 		this.name = copy.name;
 		this.parameters = new ArrayList<>();
-		for(ObservationParameter param : co
+		for(ObservationParameter param : copy.parameters) {
+			parameters.add(new ObservationParameter(param));
+		}
+	}
+	
+	public String getName() { return name; }
+	public List<
