@@ -92,4 +92,10 @@ public class Observation implements Serializable{
 		for(ObservationParameter param : parameters) {
 			param.setValue("");
 		}
-	
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCod
