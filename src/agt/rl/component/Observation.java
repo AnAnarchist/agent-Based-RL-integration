@@ -80,4 +80,7 @@ public class Observation implements Serializable{
 	public List<ObservationParameter> getParameters() { return parameters; }
 	
 	public void setParamValues(Term observationTerm) {
-		Literal observatio
+		Literal observation = (Literal) observationTerm;
+		int index = 0;
+		for(Term param : observation.getTerms()) {
+			parameters.get(index).setValue(param.toS
