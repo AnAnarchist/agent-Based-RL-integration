@@ -104,4 +104,10 @@ public class Observation implements Serializable{
 	}
 
 	@Override
-	public boolean equ
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			ret
