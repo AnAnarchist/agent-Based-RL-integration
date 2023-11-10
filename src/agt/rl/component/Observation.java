@@ -110,4 +110,9 @@ public class Observation implements Serializable{
 		if (obj == null)
 			return false;
 		if (getClass() != obj.getClass())
-			ret
+			return false;
+		Observation other = (Observation) obj;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if
