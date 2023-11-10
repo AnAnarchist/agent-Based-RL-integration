@@ -120,4 +120,10 @@ public class Observation implements Serializable{
 		if (parameters == null) {
 			if (other.parameters != null)
 				return false;
-		} el
+		} else if (!parameters.equals(other.parameters))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
