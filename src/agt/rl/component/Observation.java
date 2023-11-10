@@ -115,4 +115,9 @@ public class Observation implements Serializable{
 		if (name == null) {
 			if (other.name != null)
 				return false;
-		} else if
+		} else if (!name.equals(other.name))
+			return false;
+		if (parameters == null) {
+			if (other.parameters != null)
+				return false;
+		} el
