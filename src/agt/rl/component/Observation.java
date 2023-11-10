@@ -127,3 +127,6 @@ public class Observation implements Serializable{
 
 	@Override
 	public String toString() {
+		return "Action [name=" + name + ", parameters=" + parameters + "]";
+	}
+}
