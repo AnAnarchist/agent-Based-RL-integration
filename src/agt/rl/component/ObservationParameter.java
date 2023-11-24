@@ -64,3 +64,39 @@ public class ObservationParameter implements Serializable{
 		result = prime * result + ((set == null) ? 0 : set.hashCode());
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		result = prime * result + ((value == null) ? 0 : value.hashCode());
+		return result;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ObservationParameter other = (ObservationParameter) obj;
+		if (Double.doubleToLongBits(max) != Double.doubleToLongBits(other.max))
+			return false;
+		if (Double.doubleToLongBits(min) != Double.doubleToLongBits(other.min))
+			return false;
+		if (set == null) {
+			if (other.set != null)
+				return false;
+		} else if (!set.equals(other.set))
+			return false;
+		if (type != other.type)
+			return false;
+		if (value == null) {
+			if (other.value != null)
+				return false;
+		} else if (!value.equals(other.value))
+			return false;
+		return true;
+	}
+	@Override
+	public String toString() {
+		return "ActionParameter [type=" + type + ", min=" + min + ", max=" + max + ", set=" + set
+				+ ", value=" + value + "]";
+	}
+}
