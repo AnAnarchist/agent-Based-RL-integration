@@ -64,3 +64,19 @@ public class execute extends DefaultInternalAction {
 		if(!isTerminal) {
 			String redoRL = "rl.execute(" + goal + ")";
 			rlPlanBody.add(new PlanBodyImpl(BodyType.internalAction, ASSyntax.parseTerm(redoRL)));
+		}
+
+		//add the plan on top of current intention
+		Intention currentIntention = transitionSystem.getC().getSelectedIntention();
+		IntendedMeans currentMeans = currentIntention.pop();
+		PlanBody currentPlan = currentMeans.getCurrentStep().clonePB();
+        if(currentPlan.getPlanSize() > 1) {
+            currentPlan.removeBody(0);
+            rlPlanBody.add(currentPlan);
+        }
+		currentMeans.insertAsNextStep(rlPlanBody);
+		currentIntention.push(currentMeans);
+		
+		return true;
+	}
+}
