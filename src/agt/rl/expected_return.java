@@ -15,4 +15,8 @@ import rl.component.Action;
 import rl.component.GoalRL;
 import rl.component.PlanLibraryRL;
 
-public class expected_return extends DefaultInternalAction 
+public class expected_return extends DefaultInternalAction {
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	public Object execute(TransitionSystem transitionSystem, final Unifi
