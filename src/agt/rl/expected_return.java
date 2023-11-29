@@ -11,4 +11,8 @@ import jason.asSyntax.NumberTermImpl;
 import jason.asSyntax.Term;
 import rl.algorithm.AlgorithmRL;
 import rl.beliefbase.BeliefBaseRL;
-import rl.comp
+import rl.component.Action;
+import rl.component.GoalRL;
+import rl.component.PlanLibraryRL;
+
+public class expected_return extends DefaultInternalAction 
