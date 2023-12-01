@@ -19,4 +19,6 @@ public class expected_return extends DefaultInternalAction {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	public Object execute(TransitionSystem transitionSystem, final Unifi
+	public Object execute(TransitionSystem transitionSystem, final Unifier unifier, final Term[] arguments) throws Exception {
+		BeliefBaseRL rlBB = (BeliefBaseRL) transitionSystem.getAg().getBB();
+		if(arguments.length != 2 
