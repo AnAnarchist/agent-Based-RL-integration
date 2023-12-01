@@ -21,4 +21,9 @@ public class expected_return extends DefaultInternalAction {
 	@Override
 	public Object execute(TransitionSystem transitionSystem, final Unifier unifier, final Term[] arguments) throws Exception {
 		BeliefBaseRL rlBB = (BeliefBaseRL) transitionSystem.getAg().getBB();
-		if(arguments.length != 2 
+		if(arguments.length != 2 || !arguments[1].isVar()) {
+			return false;
+		}
+		String goal = GoalRL.extractGoal(arguments[0], unifier);
+		if(goal == null) {
+			retur
