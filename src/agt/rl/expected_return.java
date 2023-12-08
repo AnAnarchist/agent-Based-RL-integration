@@ -26,4 +26,7 @@ public class expected_return extends DefaultInternalAction {
 		}
 		String goal = GoalRL.extractGoal(arguments[0], unifier);
 		if(goal == null) {
-			retur
+			return false;
+		}
+		Set<Literal> observation = rlBB.getCurrentObservation(goal);
+		Set<Action> action = PlanLibraryRL.getActionsForGoa
