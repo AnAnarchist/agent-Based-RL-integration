@@ -32,4 +32,8 @@ public class expected_return extends DefaultInternalAction {
 		Set<Action> action = PlanLibraryRL.getActionsForGoal(transitionSystem, unifier, goal);
 		AlgorithmRL rl = rlBB.getRLInstance(goal);
 		
-		double expectedReturn = rl.expectedReturn(action, observati
+		double expectedReturn = rl.expectedReturn(action, observation);
+		NumberTerm result = new NumberTermImpl(expectedReturn);
+		return unifier.unifies(result, arguments[1]);
+	}
+}
