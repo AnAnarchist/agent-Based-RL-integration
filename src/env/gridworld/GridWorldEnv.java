@@ -150,3 +150,40 @@ public class GridWorldEnv extends Artifact {
 	class GridView extends GridWorldView {
 
 		private static final long serialVersionUID = 1L;
+
+		public GridView(GridModel model) {
+			super(model, "Grid World", 600);
+			defaultFont = new Font("Arial", Font.BOLD, 18);
+			setVisible(true);
+			repaint();
+		}
+
+		@Override
+		public void draw(Graphics g, int x, int y, int object) {
+			switch (object) {
+			case GridWorldEnv.FINISH_LINE:
+				drawFinishLine(g, x, y);
+				break;
+			}
+		}
+
+		@Override
+		public void drawAgent(Graphics g, int x, int y, Color c, int id) {
+			String label = "A";
+			c = Color.blue;
+			super.drawAgent(g, x, y, c, -1);
+			if (id == 0) {
+				g.setColor(Color.black);
+			}
+			super.drawString(g, x, y, defaultFont, label);
+			repaint();
+		}
+
+		public void drawFinishLine(Graphics g, int x, int y) {
+			super.drawObstacle(g, x, y);
+			g.setColor(Color.white);
+			drawString(g, x, y, defaultFont, "F");
+		}
+
+	}
+}
