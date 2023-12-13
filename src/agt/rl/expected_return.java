@@ -29,4 +29,7 @@ public class expected_return extends DefaultInternalAction {
 			return false;
 		}
 		Set<Literal> observation = rlBB.getCurrentObservation(goal);
-		Set<Action> action = PlanLibraryRL.getActionsForGoa
+		Set<Action> action = PlanLibraryRL.getActionsForGoal(transitionSystem, unifier, goal);
+		AlgorithmRL rl = rlBB.getRLInstance(goal);
+		
+		double expectedReturn = rl.expectedReturn(action, observati
