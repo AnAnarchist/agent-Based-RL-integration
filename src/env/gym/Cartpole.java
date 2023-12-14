@@ -10,4 +10,9 @@ import gym.rest.GymRest;
 import gym.rest.StateRest;
 import simulation.EpisodicLogger;
 
-import jason.asSynta
+import jason.asSyntax.Atom;
+
+public class Cartpole extends Artifact{
+	
+	private static final boolean SHOW_VIEW = false;
+	private static fina
