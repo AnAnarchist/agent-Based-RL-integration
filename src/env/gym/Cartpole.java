@@ -15,4 +15,7 @@ import jason.asSyntax.Atom;
 public class Cartpole extends Artifact{
 	
 	private static final boolean SHOW_VIEW = false;
-	private static fina
+	private static final int EVALUATION_INTERVAL = 50;
+	private static final int EVALUATION_EPISODES = 100;
+	
+	GymRest<Double> cartpole = new GymRes
