@@ -18,4 +18,8 @@ public class Cartpole extends Artifact{
 	private static final int EVALUATION_INTERVAL = 50;
 	private static final int EVALUATION_EPISODES = 100;
 	
-	GymRest<Double> cartpole = new GymRes
+	GymRest<Double> cartpole = new GymRest<>();
+	
+	private EpisodicLogger logger = new EpisodicLogger("CartPole-v0", true, 15);;
+	private int trainEpisodeCount = 0;
+	private int
