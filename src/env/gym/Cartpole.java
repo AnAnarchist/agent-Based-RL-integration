@@ -29,4 +29,7 @@ public class Cartpole extends Artifact{
 	private int step = 0;
 	
 	@OPERATION
-	public void ini
+	public void init() {
+		Map<String, String> parameters = new HashMap<>();
+		parameters.put("show_gui", Boolean.toString(SHOW_VIEW));
+		StateRest<Double
