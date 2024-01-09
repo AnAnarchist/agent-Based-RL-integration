@@ -32,4 +32,5 @@ public class Cartpole extends Artifact{
 	public void init() {
 		Map<String, String> parameters = new HashMap<>();
 		parameters.put("show_gui", Boolean.toString(SHOW_VIEW));
-		StateRest<Double
+		StateRest<Double> state = cartpole.initialize("CartPole-v0", parameters);
+		defineObsProperty("cart_position", state.getState
