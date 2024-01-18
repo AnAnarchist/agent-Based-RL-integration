@@ -36,3 +36,6 @@ public class Cartpole extends Artifact{
 		defineObsProperty("cart_position", state.getState().get(0));
 		defineObsProperty("cart_velocity", state.getState().get(1));
 		defineObsProperty("pole_position", state.getState().get(2));
+		defineObsProperty("pole_velocity", state.getState().get(3));
+		
+		defineObsProperty("rl_parameter", new Atom("policy"), new Atom("egree
