@@ -53,4 +53,10 @@ public class Cartpole extends Artifact{
 		if (move.equals("right")) {
 			state = cartpole.step(0);
 		} else {
-			stat
+			state = cartpole.step(1);
+		}
+
+		episodeReward += state.getReward();
+		if(state.isTerminal()) {
+			if(episodeEvaluation > 0) {
+				episodeEval
