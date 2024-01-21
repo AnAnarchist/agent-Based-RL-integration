@@ -59,4 +59,7 @@ public class Cartpole extends Artifact{
 		episodeReward += state.getReward();
 		if(state.isTerminal()) {
 			if(episodeEvaluation > 0) {
-				episodeEval
+				episodeEvaluation--;
+				evaluationRewards += episodeReward;
+				if(episodeEvaluation == 0) {
+					logger.episodeEnd(evaluationRewar
