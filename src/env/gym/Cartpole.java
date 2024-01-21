@@ -46,4 +46,11 @@ public class Cartpole extends Artifact{
 		if (SHOW_VIEW) { 
 			try {
 				Thread.sleep(100);
-			} catch (Interr
+			} catch (InterruptedException e) {}
+		}
+
+		StateRest<Double> state;
+		if (move.equals("right")) {
+			state = cartpole.step(0);
+		} else {
+			stat
