@@ -62,4 +62,8 @@ public class Cartpole extends Artifact{
 				episodeEvaluation--;
 				evaluationRewards += episodeReward;
 				if(episodeEvaluation == 0) {
-					logger.episodeEnd(evaluationRewar
+					logger.episodeEnd(evaluationRewards/EVALUATION_EPISODES);
+					evaluationRewards = 0;
+
+					ObsProperty policy = getObsProperty("rl_parameter");
+					policy.updateV
