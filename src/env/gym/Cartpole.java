@@ -73,4 +73,11 @@ public class Cartpole extends Artifact{
 				if(trainEpisodeCount % EVALUATION_INTERVAL == 0) {
 					ObsProperty policy = getObsProperty("rl_parameter");
 					policy.updateValue(1, new Atom("greedy"));
-					episode
+					episodeEvaluation = EVALUATION_EPISODES;
+					
+					System.out.println("step " + step);
+				}
+			}
+			episodeReward = 0;
+		}
+	
