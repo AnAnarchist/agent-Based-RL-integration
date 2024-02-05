@@ -86,4 +86,6 @@ public class Cartpole extends Artifact{
 	}
 	
 	private void updatePercepts(StateRest<Double> state) {
-		ObsProperty cart_position = 
+		ObsProperty cart_position = getObsProperty("cart_position");
+		cart_position.updateValue(0, state.getState().get(0));
+		ObsProperty cart_velocity = getObsProperty(
