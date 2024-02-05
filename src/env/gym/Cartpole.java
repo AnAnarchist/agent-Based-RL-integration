@@ -80,4 +80,10 @@ public class Cartpole extends Artifact{
 			}
 			episodeReward = 0;
 		}
+		
+		step++;
+		updatePercepts(state);
+	}
 	
+	private void updatePercepts(StateRest<Double> state) {
+		ObsProperty cart_position = 
