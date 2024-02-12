@@ -91,3 +91,6 @@ public class Cartpole extends Artifact{
 		ObsProperty cart_velocity = getObsProperty("cart_velocity");
 		cart_velocity.updateValue(0, state.getState().get(1));
 		ObsProperty pole_position = getObsProperty("pole_position");
+		pole_position.updateValue(0, state.getState().get(2));
+		ObsProperty pole_velocity = getObsProperty("pole_velocity");
+		
