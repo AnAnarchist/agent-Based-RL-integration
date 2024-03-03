@@ -14,4 +14,6 @@ import jason.asSyntax.Atom;
 
 public class MountainCar extends Artifact{
 	
-	priv
+	private static final boolean SHOW_VIEW = false;
+	private static final int EVALUATION_INTERVAL = 100;
+	private static final i
