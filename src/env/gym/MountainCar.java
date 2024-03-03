@@ -16,4 +16,8 @@ public class MountainCar extends Artifact{
 	
 	private static final boolean SHOW_VIEW = false;
 	private static final int EVALUATION_INTERVAL = 100;
-	private static final i
+	private static final int EVALUATION_EPISODES = 100;
+	
+	GymRest<Double> mountainCar = new GymRest<>();
+	
+	private EpisodicLogger logger = new EpisodicLogger("MountainCar
