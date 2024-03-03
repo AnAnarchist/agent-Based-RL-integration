@@ -20,4 +20,7 @@ public class MountainCar extends Artifact{
 	
 	GymRest<Double> mountainCar = new GymRest<>();
 	
-	private EpisodicLogger logger = new EpisodicLogger("MountainCar
+	private EpisodicLogger logger = new EpisodicLogger("MountainCar-v0", true, 15);
+	private int trainEpisodeCount = 0;
+	private int episodeReward = 0;
+	private int ep
