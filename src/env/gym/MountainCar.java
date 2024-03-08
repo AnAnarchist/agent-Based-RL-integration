@@ -23,4 +23,10 @@ public class MountainCar extends Artifact{
 	private EpisodicLogger logger = new EpisodicLogger("MountainCar-v0", true, 15);
 	private int trainEpisodeCount = 0;
 	private int episodeReward = 0;
-	private int ep
+	private int episodeEvaluation = 0;
+	private double evaluationRewards = 0;
+	
+	private int step = 0;
+	
+	@OPERATION
+	public
