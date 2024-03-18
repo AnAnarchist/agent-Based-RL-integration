@@ -32,4 +32,6 @@ public class MountainCar extends Artifact{
 	public void init() {
 		Map<String, String> parameters = new HashMap<>();
 		parameters.put("show_gui", Boolean.toString(SHOW_VIEW));
-		StateRest<Double> state
+		StateRest<Double> state = mountainCar.initialize("MountainCar-v0", parameters);
+		defineObsProperty("position", state.getState().get(0));
+		defineObsProperty("speed",
