@@ -37,4 +37,12 @@ public class MountainCar extends Artifact{
 		defineObsProperty("speed", state.getState().get(1));
 		defineObsProperty("proximity", 0);
 		
-		defineObsProperty("rl_parameter", new Atom("policy"), new Atom("egreedy")
+		defineObsProperty("rl_parameter", new Atom("policy"), new Atom("egreedy"));
+	}
+
+	@OPERATION
+	public void move(String move) {
+		if (SHOW_VIEW) { 
+			try {
+				Thread.sleep(100);
+			} catch (In
