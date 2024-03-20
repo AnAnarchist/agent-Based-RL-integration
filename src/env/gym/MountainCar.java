@@ -34,4 +34,7 @@ public class MountainCar extends Artifact{
 		parameters.put("show_gui", Boolean.toString(SHOW_VIEW));
 		StateRest<Double> state = mountainCar.initialize("MountainCar-v0", parameters);
 		defineObsProperty("position", state.getState().get(0));
-		defineObsProperty("speed",
+		defineObsProperty("speed", state.getState().get(1));
+		defineObsProperty("proximity", 0);
+		
+		defineObsProperty("rl_parameter", new Atom("policy"), new Atom("egreedy")
