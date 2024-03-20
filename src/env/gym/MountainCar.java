@@ -45,4 +45,10 @@ public class MountainCar extends Artifact{
 		if (SHOW_VIEW) { 
 			try {
 				Thread.sleep(100);
-			} catch (In
+			} catch (InterruptedException e) {}
+		}
+
+		StateRest<Double> state;
+		if (move.equals("back")) {
+			state = mountainCar.step(0);
+		} else if (move.equals("forth
