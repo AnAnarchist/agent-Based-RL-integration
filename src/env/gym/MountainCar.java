@@ -51,4 +51,11 @@ public class MountainCar extends Artifact{
 		StateRest<Double> state;
 		if (move.equals("back")) {
 			state = mountainCar.step(0);
-		} else if (move.equals("forth
+		} else if (move.equals("forth")) {
+			state = mountainCar.step(2);
+		} else {
+			state = mountainCar.step(1);
+		}
+
+		episodeReward += state.getReward();
+		if(state.isTerm
