@@ -58,4 +58,9 @@ public class MountainCar extends Artifact{
 		}
 
 		episodeReward += state.getReward();
-		if(state.isTerm
+		if(state.isTerminal()) {
+			if(episodeEvaluation > 0) {
+				episodeEvaluation--;
+				evaluationRewards += episodeReward;
+				if(episodeEvaluation == 0) {
+					logg
