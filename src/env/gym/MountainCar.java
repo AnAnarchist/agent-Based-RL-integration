@@ -63,4 +63,7 @@ public class MountainCar extends Artifact{
 				episodeEvaluation--;
 				evaluationRewards += episodeReward;
 				if(episodeEvaluation == 0) {
-					logg
+					logger.episodeEnd(evaluationRewards/EVALUATION_EPISODES);
+					evaluationRewards = 0;
+
+					ObsProperty policy = getObsProperty("rl_
