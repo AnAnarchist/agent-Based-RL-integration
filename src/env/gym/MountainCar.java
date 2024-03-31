@@ -71,4 +71,7 @@ public class MountainCar extends Artifact{
 				}
 			} else {
 				trainEpisodeCount++;
-				if(trainEpisodeC
+				if(trainEpisodeCount % EVALUATION_INTERVAL == 0) {
+					ObsProperty policy = getObsProperty("rl_parameter");
+					policy.updateValue(1, new Atom("greedy"));
+	
