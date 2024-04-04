@@ -82,4 +82,10 @@ public class MountainCar extends Artifact{
 			episodeReward = 0;
 		}
 		
-		st
+		step++;
+		updatePercepts(state);
+	}
+	
+	private void updatePercepts(StateRest<Double> state) {
+		ObsProperty position = getObsProperty("position");
+		p
