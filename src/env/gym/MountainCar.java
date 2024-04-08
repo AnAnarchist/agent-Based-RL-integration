@@ -90,4 +90,8 @@ public class MountainCar extends Artifact{
 		ObsProperty position = getObsProperty("position");
 		position.updateValue(0, state.getState().get(0));
 		ObsProperty speed = getObsProperty("speed");
-		speed.updateValue(0, s
+		speed.updateValue(0, state.getState().get(1));
+		if (state.isTerminal()) {
+			if (!hasObsProperty("on_top"))
+				defineObsProperty("on_top");
+		}
