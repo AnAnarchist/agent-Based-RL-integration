@@ -88,4 +88,6 @@ public class MountainCar extends Artifact{
 	
 	private void updatePercepts(StateRest<Double> state) {
 		ObsProperty position = getObsProperty("position");
-		p
+		position.updateValue(0, state.getState().get(0));
+		ObsProperty speed = getObsProperty("speed");
+		speed.updateValue(0, s
