@@ -100,4 +100,7 @@ public class MountainCar extends Artifact{
 			} catch (IllegalArgumentException e) {}
 		}
 		double pos = state.getState().get(0);
-		Ob
+		ObsProperty proximity = getObsProperty("proximity");
+		double proximity_reward = 0;
+		if(pos > -0.4) {
+			proximity_reward = Math.pow(1 + 
