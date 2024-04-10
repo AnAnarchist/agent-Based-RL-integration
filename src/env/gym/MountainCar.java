@@ -94,4 +94,10 @@ public class MountainCar extends Artifact{
 		if (state.isTerminal()) {
 			if (!hasObsProperty("on_top"))
 				defineObsProperty("on_top");
+		} else {
+			try {
+				removeObsProperty("on_top");
+			} catch (IllegalArgumentException e) {}
 		}
+		double pos = state.getState().get(0);
+		Ob
