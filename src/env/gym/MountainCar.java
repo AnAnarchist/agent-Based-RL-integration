@@ -103,4 +103,8 @@ public class MountainCar extends Artifact{
 		ObsProperty proximity = getObsProperty("proximity");
 		double proximity_reward = 0;
 		if(pos > -0.4) {
-			proximity_reward = Math.pow(1 + 
+			proximity_reward = Math.pow(1 + pos, 2);
+		}
+		proximity.updateValue(0, proximity_reward);
+	}
+}
