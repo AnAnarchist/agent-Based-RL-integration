@@ -15,4 +15,10 @@ public class EnvironmentRest {
 	}
 
 	public Map<String, String> getParameters() {
-		return paramet
+		return parameters;
+	}
+
+	public void setParameters(Map<String, String> parameters) {
+		this.parameters = parameters;
+	}
+}
