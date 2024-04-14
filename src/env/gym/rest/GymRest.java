@@ -7,4 +7,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @SuppressWarnings("unchecked")
-pub
+public class GymRest<T> {
+	
+	public static String TARGET = "http://localhost:5003/env/";
+	
+	private Client client = ClientBuilder.newClient
