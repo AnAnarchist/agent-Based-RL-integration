@@ -23,4 +23,10 @@ public class GymRest<T> {
 		
 		Response response = client.target(TARGET + envName)
                 .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(env, Me
+                .post(Entity.entity(env, MediaType.APPLICATION_JSON));
+
+		return response.readEntity(StateRest.class);
+	}
+	
+	public StateRest<T> step(int action){
+		Respo
