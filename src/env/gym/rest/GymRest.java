@@ -15,4 +15,10 @@ public class GymRest<T> {
 	private String envName; 
 
 	public StateRest<T> initialize(String envName, Map<String, String> parameters) {
+		this.envName = envName;
 		
+		EnvironmentRest env = new EnvironmentRest();
+		env.setName(envName);
+		env.setParameters(parameters);
+		
+		Res
