@@ -21,4 +21,6 @@ public class GymRest<T> {
 		env.setName(envName);
 		env.setParameters(parameters);
 		
-		Res
+		Response response = client.target(TARGET + envName)
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(env, Me
