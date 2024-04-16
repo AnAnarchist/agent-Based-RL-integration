@@ -29,4 +29,6 @@ public class GymRest<T> {
 	}
 	
 	public StateRest<T> step(int action){
-		Respo
+		Response response = client.target(TARGET + envName + "/" + action)
+                .request(MediaType.APPLICATION_JSON)
+        
