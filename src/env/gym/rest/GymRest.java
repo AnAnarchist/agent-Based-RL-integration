@@ -31,4 +31,9 @@ public class GymRest<T> {
 	public StateRest<T> step(int action){
 		Response response = client.target(TARGET + envName + "/" + action)
                 .request(MediaType.APPLICATION_JSON)
-        
+                .post(Entity.entity(action, MediaType.APPLICATION_JSON));
+		return response.readEntity(StateRest.class);
+	}
+	
+	
+}
