@@ -12,4 +12,12 @@ public class StateRest<T> {
     }
 
     public void setState(List<T> state) {
-        
+        this.state = state;
+    }
+
+    public double getReward() {
+        return reward;
+    }
+
+    public void setReward(double reward) {
+    
