@@ -20,4 +20,11 @@ public class StateRest<T> {
     }
 
     public void setReward(double reward) {
-    
+        this.reward = reward;
+    }
+
+    public boolean isTerminal() {
+        return terminal;
+    }
+
+    public vo
