@@ -33,4 +33,6 @@ public class StateRest<T> {
 
 	@Override
 	public String toString() {
-		return "StateRes
+		return "StateRest [state=" + state + ", reward=" + reward + ", terminal=" + terminal + "]";
+	}
+}
