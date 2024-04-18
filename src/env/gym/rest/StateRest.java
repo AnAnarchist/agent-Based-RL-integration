@@ -27,4 +27,10 @@ public class StateRest<T> {
         return terminal;
     }
 
-    public vo
+    public void setTerminal(boolean terminal) {
+        this.terminal = terminal;
+    }
+
+	@Override
+	public String toString() {
+		return "StateRes
