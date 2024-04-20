@@ -10,4 +10,10 @@ public class EpisodicLogger {
 
 	private int episodes = 0;
 	private int episodesValue = 0;
-	private double ave
+	private double averageValue = 0;
+
+	private final boolean saveResult;
+	private final int saveResultAt;
+	PrintWriter simultationResultsWriter;
+	
+	SimpleD
