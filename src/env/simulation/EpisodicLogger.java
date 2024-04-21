@@ -16,4 +16,7 @@ public class EpisodicLogger {
 	private final int saveResultAt;
 	PrintWriter simultationResultsWriter;
 	
-	SimpleD
+	SimpleDateFormat sdf = new SimpleDateFormat("_yyyy:MM:dd_HH-mm-ss");
+
+	public EpisodicLogger(String filename, boolean saveResult, int saveResultAt) {
+		this.saveRe
