@@ -23,4 +23,7 @@ public class EpisodicLogger {
 		this.saveResult = saveResult;
 		if (saveResult) {
 			try {
-				simultationResultsWriter = new PrintWriter(filename
+				simultationResultsWriter = new PrintWriter(filename + sdf.format(new Date()) + ".txt", "UTF-8");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (Unsupported
