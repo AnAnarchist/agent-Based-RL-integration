@@ -37,4 +37,13 @@ public class EpisodicLogger {
 	}
 	
 	public EpisodicLogger(boolean saveResult) {
-		this(saveR
+		this(saveResult, 1000);
+	}
+	
+	public EpisodicLogger() {
+		this(false);
+	}
+
+	public void episodeEnd(double value) {
+		episodes++;
+		episodesValue++
