@@ -46,4 +46,8 @@ public class EpisodicLogger {
 
 	public void episodeEnd(double value) {
 		episodes++;
-		episodesValue++
+		episodesValue++;
+
+		averageValue = (double) (averageValue + ((value - averageValue) / episodesValue));
+		System.out.println(
+				"epis
