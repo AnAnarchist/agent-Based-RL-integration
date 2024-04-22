@@ -32,4 +32,9 @@ public class EpisodicLogger {
 		}
 	}
 	
-	public EpisodicLogger(boolean saveResult, int saveRe
+	public EpisodicLogger(boolean saveResult, int saveResultAt) {
+		this("simulation.txt", saveResult, saveResultAt);
+	}
+	
+	public EpisodicLogger(boolean saveResult) {
+		this(saveR
