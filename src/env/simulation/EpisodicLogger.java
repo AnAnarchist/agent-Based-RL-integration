@@ -54,4 +54,7 @@ public class EpisodicLogger {
 				" value: " + value +
 				" - average value last 100 ep: " + averageValue);
 
-		if (saveR
+		if (saveResult) {
+			if (episodes <= saveResultAt) {
+				simultationResultsWriter.println(value);
+			} else if (episodes == saveResultA
