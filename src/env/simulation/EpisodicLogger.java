@@ -50,4 +50,8 @@ public class EpisodicLogger {
 
 		averageValue = (double) (averageValue + ((value - averageValue) / episodesValue));
 		System.out.println(
-				"epis
+				"episode " + episodes +
+				" value: " + value +
+				" - average value last 100 ep: " + averageValue);
+
+		if (saveR
