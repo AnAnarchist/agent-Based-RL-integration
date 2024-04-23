@@ -57,4 +57,15 @@ public class EpisodicLogger {
 		if (saveResult) {
 			if (episodes <= saveResultAt) {
 				simultationResultsWriter.println(value);
-			} else if (episodes == saveResultA
+			} else if (episodes == saveResultAt + 1) {
+				simultationResultsWriter.close();
+			}
+		}
+
+		if (episodesValue == 100) {
+			episodesValue = 0;
+			averageValue = 0;
+		}
+	}
+
+}
