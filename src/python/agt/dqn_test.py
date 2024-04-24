@@ -11,3 +11,6 @@ num_episode = 2000  # @param
 board_size = 9
 
 #env
+dqn = DqnAgent(
+    array_spec.BoundedArraySpec(
+        shape=(), dtype=np.int32, minimum=0, maximum=3, name='action'),
