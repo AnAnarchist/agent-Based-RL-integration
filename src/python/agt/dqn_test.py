@@ -14,3 +14,6 @@ board_size = 9
 dqn = DqnAgent(
     array_spec.BoundedArraySpec(
         shape=(), dtype=np.int32, minimum=0, maximum=3, name='action'),
+    array_spec.BoundedArraySpec(
+        shape=(2,), dtype=np.int32, minimum=0, maximum=board_size, name='observation'),
+   
