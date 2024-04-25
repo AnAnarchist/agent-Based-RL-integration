@@ -22,4 +22,10 @@ dqn = DqnAgent(
 state = np.array([0, 0], dtype=np.int32)
 
 episode_count = 0
-step_count
+step_count = 0
+while episode_count < num_episode:
+  if episode_count < 1000:
+    action_step = dqn.get_train_action()
+  else:
+    if episode_count == 1000:
+  
