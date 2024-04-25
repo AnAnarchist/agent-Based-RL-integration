@@ -16,4 +16,10 @@ dqn = DqnAgent(
         shape=(), dtype=np.int32, minimum=0, maximum=3, name='action'),
     array_spec.BoundedArraySpec(
         shape=(2,), dtype=np.int32, minimum=0, maximum=board_size, name='observation'),
-   
+        np.array([0, 0], dtype=np.int32))
+
+#[row, column]
+state = np.array([0, 0], dtype=np.int32)
+
+episode_count = 0
+step_count
