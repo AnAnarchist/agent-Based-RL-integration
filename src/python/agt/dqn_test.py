@@ -28,4 +28,7 @@ while episode_count < num_episode:
     action_step = dqn.get_train_action()
   else:
     if episode_count == 1000:
+      print("$$$$$$$ use greedy $$$$$$$")
+    action_step = dqn.get_greedy_action()
+  action = action_step.action.numpy()
   
