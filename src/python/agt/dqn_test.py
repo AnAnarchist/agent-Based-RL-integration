@@ -31,4 +31,8 @@ while episode_count < num_episode:
       print("$$$$$$$ use greedy $$$$$$$")
     action_step = dqn.get_greedy_action()
   action = action_step.action.numpy()
-  
+  #up
+  if action == 0 and state[0] > 0:
+    state[0] = state[0] - 1
+  #down
+  elif action == 1 and state[0] < board_size:
