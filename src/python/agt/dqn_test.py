@@ -36,3 +36,9 @@ while episode_count < num_episode:
     state[0] = state[0] - 1
   #down
   elif action == 1 and state[0] < board_size:
+    state[0] = state[0] + 1
+  #left
+  elif action == 2 and state[1] > 0:
+    state[1] = state[1] - 1
+  #right
+  elif acti
