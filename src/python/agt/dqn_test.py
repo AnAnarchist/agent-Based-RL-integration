@@ -49,4 +49,7 @@ while episode_count < num_episode:
     is_terminal = True
     state = np.array([randint(0, board_size), randint(0, board_size)], dtype=np.int32)
   #elif step_count >= 600:
-  #
+  #  reward = -1 
+  #  is_terminal = True
+  #  state = np.array([randint(0, board_size), randint(0, board_size)], dtype=np.int32)
+  
