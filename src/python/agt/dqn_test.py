@@ -52,4 +52,10 @@ while episode_count < num_episode:
   #  reward = -1 
   #  is_terminal = True
   #  state = np.array([randint(0, board_size), randint(0, board_size)], dtype=np.int32)
+  else:
+    reward = -1
+    is_terminal = False
+
+  dqn.update(state, reward, is_terminal, action_step)
   
+  if is_terminal:
