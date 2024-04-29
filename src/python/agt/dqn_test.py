@@ -59,3 +59,8 @@ while episode_count < num_episode:
   dqn.update(state, reward, is_terminal, action_step)
   
   if is_terminal:
+    episode_count = episode_count + 1
+    print(f"end episode in {step_count}")
+    step_count = 0
+
+  step_count = step_count + 1
