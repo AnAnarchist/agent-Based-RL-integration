@@ -18,4 +18,10 @@ class GenericEnv(py_environment.PyEnvironment):
   def action_spec(self):
     return self._action_spec
 
-  def observation_spec(s
+  def observation_spec(self):
+    return self._observation_spec
+
+  def _reset(self):
+    self._episode_ended = False
+    self._is_episode_end = False
+  
