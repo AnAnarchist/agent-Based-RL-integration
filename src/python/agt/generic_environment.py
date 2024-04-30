@@ -11,4 +11,11 @@ class GenericEnv(py_environment.PyEnvironment):
     self._action_spec = actions
     self._observation_spec = observations
     self._initial_state = initial_state
-    self.
+    self._state = initial_state
+    self._is_episode_end = False
+    self._episode_ended = False
+
+  def action_spec(self):
+    return self._action_spec
+
+  def observation_spec(s
