@@ -7,4 +7,8 @@ from tf_agents.trajectories import time_step as ts
 
 class GenericEnv(py_environment.PyEnvironment):
 
-  def __init__(self, actions, observations, initial
+  def __init__(self, actions, observations, initial_state):
+    self._action_spec = actions
+    self._observation_spec = observations
+    self._initial_state = initial_state
+    self.
