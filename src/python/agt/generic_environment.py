@@ -37,4 +37,9 @@ class GenericEnv(py_environment.PyEnvironment):
       # The last action ended the episode. Ignore the current action and start a new episode.
       return self.reset()
 
-    # Make sure episodes 
+    # Make sure episodes don't go on forever.
+    if self._is_episode_end:
+      self._episode_ended = True
+    
+    if self._episode_ended:
+      return ts.term
