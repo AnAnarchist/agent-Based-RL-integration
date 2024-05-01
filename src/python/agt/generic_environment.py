@@ -24,4 +24,8 @@ class GenericEnv(py_environment.PyEnvironment):
   def _reset(self):
     self._episode_ended = False
     self._is_episode_end = False
-  
+    return ts.restart(self._state)
+
+  def set_next(self, state, reward, is_episode_end):
+      self._state = state
+      self
