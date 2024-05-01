@@ -34,4 +34,7 @@ class GenericEnv(py_environment.PyEnvironment):
   def _step(self, action):
 
     if self._episode_ended:
-      # The last 
+      # The last action ended the episode. Ignore the current action and start a new episode.
+      return self.reset()
+
+    # Make sure episodes 
