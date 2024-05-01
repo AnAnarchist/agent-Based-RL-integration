@@ -28,4 +28,10 @@ class GenericEnv(py_environment.PyEnvironment):
 
   def set_next(self, state, reward, is_episode_end):
       self._state = state
-      self
+      self._reward = reward
+      self._is_episode_end = is_episode_end
+
+  def _step(self, action):
+
+    if self._episode_ended:
+      # The last 
