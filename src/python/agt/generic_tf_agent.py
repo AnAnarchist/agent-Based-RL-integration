@@ -8,4 +8,7 @@ from abc import ABC, abstractmethod
 
 from tf_agents.environments import tf_py_environment
 from tf_agents.replay_buffers import tf_uniform_replay_buffer
-from tf_agents.trajectories 
+from tf_agents.trajectories import trajectory
+from tf_agents.utils import common
+from tf_agents.specs import array_spec
+from tf_agents.policies import ran
