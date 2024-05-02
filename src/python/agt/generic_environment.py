@@ -42,4 +42,6 @@ class GenericEnv(py_environment.PyEnvironment):
       self._episode_ended = True
     
     if self._episode_ended:
-      return ts.term
+      return ts.termination(self._state, self._reward)
+    else:
+      return ts.transition(self._state, reward=self._reward, discount=1.0)
