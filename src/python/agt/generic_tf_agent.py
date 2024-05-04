@@ -22,3 +22,6 @@ class GenericTfAgent(ABC):
     #params
     self.replay_buffer_capacity = int(params.get('replay_buffer_capacity', 100000))
     self.fc_layer_params = ast.literal_eval(params.get('fc_layer_params', '(100, )'))
+    self.learning_rate = float(params.get('learning_rate', 1e-3))
+    self.epsilon = float(params.get('epsilon', 0.1))
+   
