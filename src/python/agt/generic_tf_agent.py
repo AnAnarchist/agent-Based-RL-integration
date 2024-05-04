@@ -24,4 +24,7 @@ class GenericTfAgent(ABC):
     self.fc_layer_params = ast.literal_eval(params.get('fc_layer_params', '(100, )'))
     self.learning_rate = float(params.get('learning_rate', 1e-3))
     self.epsilon = float(params.get('epsilon', 0.1))
-   
+    self.epsilon_decay = float(params.get('epsilon_decay', 1))
+    self.gamma = float(params.get('gamma', 1))
+    #env
+    self.train_py
