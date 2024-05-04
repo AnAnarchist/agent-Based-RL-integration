@@ -20,4 +20,5 @@ tf.compat.v1.enable_v2_behavior()
 class GenericTfAgent(ABC):
   def __init__(self, action_specification, observation_specification, initial_state, params={}):
     #params
-    self.replay_buffer_capacity 
+    self.replay_buffer_capacity = int(params.get('replay_buffer_capacity', 100000))
+    self.fc_layer_params = ast.literal_eval(params.get('fc_layer_params', '(100, )'))
