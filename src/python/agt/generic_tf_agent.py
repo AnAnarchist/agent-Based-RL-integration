@@ -18,4 +18,6 @@ from generic_environment import GenericEnv
 tf.compat.v1.enable_v2_behavior()
 
 class GenericTfAgent(ABC):
-  def __init__(sel
+  def __init__(self, action_specification, observation_specification, initial_state, params={}):
+    #params
+    self.replay_buffer_capacity 
