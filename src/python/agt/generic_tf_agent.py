@@ -27,4 +27,6 @@ class GenericTfAgent(ABC):
     self.epsilon_decay = float(params.get('epsilon_decay', 1))
     self.gamma = float(params.get('gamma', 1))
     #env
-    self.train_py
+    self.train_py_env = GenericEnv(action_specification, observation_specification, initial_state)
+    self.env = tf_py_environment.TFPyEnvironment(self.train_py_env)
+  
