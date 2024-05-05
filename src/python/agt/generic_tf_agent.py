@@ -31,4 +31,7 @@ class GenericTfAgent(ABC):
     self.env = tf_py_environment.TFPyEnvironment(self.train_py_env)
     #agent initialization
     self.optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate=self.learning_rate)
-    self.train_ste
+    self.train_step_counter = tf.compat.v2.Variable(0)
+    self.create_agent()
+    self.tf_agent.initialize()
+    self.random_policy = rando
