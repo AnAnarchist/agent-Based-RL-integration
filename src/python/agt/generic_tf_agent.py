@@ -29,4 +29,6 @@ class GenericTfAgent(ABC):
     #env
     self.train_py_env = GenericEnv(action_specification, observation_specification, initial_state)
     self.env = tf_py_environment.TFPyEnvironment(self.train_py_env)
-  
+    #agent initialization
+    self.optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate=self.learning_rate)
+    self.train_ste
