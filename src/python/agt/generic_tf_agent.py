@@ -34,4 +34,6 @@ class GenericTfAgent(ABC):
     self.train_step_counter = tf.compat.v2.Variable(0)
     self.create_agent()
     self.tf_agent.initialize()
-    self.random_policy = rando
+    self.random_policy = random_tf_policy.RandomTFPolicy(time_step_spec=self.env.time_step_spec(), action_spec=self.env.action_spec())
+
+    self.replay_buffer = t
