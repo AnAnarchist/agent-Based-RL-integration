@@ -38,4 +38,7 @@ class GenericTfAgent(ABC):
 
     self.replay_buffer = tf_uniform_replay_buffer.TFUniformReplayBuffer(
       data_spec=self.tf_agent.collect_data_spec,
-      batch_size=self.env.batch_siz
+      batch_size=self.env.batch_size,
+      max_length=self.replay_buffer_capacity)
+
+    # (Optional) Optimize by wrapping some of the code in a graph using TF function.
