@@ -36,4 +36,6 @@ class GenericTfAgent(ABC):
     self.tf_agent.initialize()
     self.random_policy = random_tf_policy.RandomTFPolicy(time_step_spec=self.env.time_step_spec(), action_spec=self.env.action_spec())
 
-    self.replay_buffer = t
+    self.replay_buffer = tf_uniform_replay_buffer.TFUniformReplayBuffer(
+      data_spec=self.tf_agent.collect_data_spec,
+      batch_size=self.env.batch_siz
