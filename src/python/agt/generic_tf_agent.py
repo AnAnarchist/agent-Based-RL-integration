@@ -46,4 +46,6 @@ class GenericTfAgent(ABC):
     # Reset the train step
     self.tf_agent.train_step_counter.assign(0)
 
-  def 
+  def update(self, observation, reward, is_terminal, action_step):
+    time_step = self.env.current_time_step()
+    self.train_py_env.set_next(o
