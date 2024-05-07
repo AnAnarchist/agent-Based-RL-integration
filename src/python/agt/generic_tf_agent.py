@@ -42,3 +42,8 @@ class GenericTfAgent(ABC):
       max_length=self.replay_buffer_capacity)
 
     # (Optional) Optimize by wrapping some of the code in a graph using TF function.
+    self.tf_agent.train = common.function(self.tf_agent.train)
+    # Reset the train step
+    self.tf_agent.train_step_counter.assign(0)
+
+  def 
