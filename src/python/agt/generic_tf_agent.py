@@ -60,4 +60,9 @@ class GenericTfAgent(ABC):
       action = self.random_policy.action(time_step)
     else:
       action = self.tf_agent.policy.action(time_step)
-    self.epsilon *= self.epsilon_d
+    self.epsilon *= self.epsilon_decay
+    #print('epsilon ', self.epsilon)
+    return action
+  def get_greedy_action(self):
+    time_step = self.env.current_time_step()
+    return self
