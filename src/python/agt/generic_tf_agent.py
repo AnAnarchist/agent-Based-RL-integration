@@ -50,4 +50,8 @@ class GenericTfAgent(ABC):
     time_step = self.env.current_time_step()
     self.train_py_env.set_next(observation, reward, is_terminal)
     next_time_step = self.env.step(action_step.action)
-    traj = trajectory.from_transition(ti
+    traj = trajectory.from_transition(time_step, action_step, next_time_step)
+    self.replay_buffer.add_batch(traj)
+    self.update_network(traj)
+
+  def get_train_ac
