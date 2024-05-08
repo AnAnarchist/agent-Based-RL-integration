@@ -54,4 +54,7 @@ class GenericTfAgent(ABC):
     self.replay_buffer.add_batch(traj)
     self.update_network(traj)
 
-  def get_train_ac
+  def get_train_action(self):
+    time_step = self.env.current_time_step()
+    if random.uniform(0, 1) < self.epsilon:
+      action = self.r
