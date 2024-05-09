@@ -65,4 +65,11 @@ class GenericTfAgent(ABC):
     return action
   def get_greedy_action(self):
     time_step = self.env.current_time_step()
-    return self
+    return self.tf_agent.policy.action(time_step)
+
+  @abstractmethod
+  def create_agent(self):
+    pass
+
+  @abstractmethod
+  def update_netwo
