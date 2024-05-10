@@ -67,3 +67,18 @@ class Action(Resource):
       action_step = agents[id].get_greedy_action()
 
     action = action_step.action.numpy()
+    agents[id].update(np.array(json_data['state'], dtype=json_data['state_type']),
+      json_data['reward'], json_data['is_terminal'], action_step)
+
+    action_list = action.tolist()
+
+    result = {'action': action_list}
+    #print("##################################")
+    #print(result)
+    return jsonify(result)
+
+api.add_resource(Env, '/agent/<string:id>')
+api.add_resource(Action, '/agent/<string:id>/<string:action_type>')
+
+if __name__ == '__main__':
+     app.run(port='5002')
