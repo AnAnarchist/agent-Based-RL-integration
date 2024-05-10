@@ -72,4 +72,5 @@ class GenericTfAgent(ABC):
     pass
 
   @abstractmethod
-  def update_netwo
+  def update_network(self, traj):
+    pass
