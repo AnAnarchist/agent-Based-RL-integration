@@ -14,4 +14,10 @@ class GenericTfEnv():
 
 
   def step(self, action):
-    step = self.env.step(a
+    step = self.env.step(action)
+    if self.show_gui:
+      self.env.render()
+    return step
+
+  def get_current_time_step(self):
+    return self.env.curre
