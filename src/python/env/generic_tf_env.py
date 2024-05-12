@@ -25,4 +25,5 @@ class GenericTfEnv():
   def get_observation_spec(self):
     return self.env.time_step_spec().observation
 
-  def get_action_spec(sel
+  def get_action_spec(self):
+    return self.env.action_spec()
