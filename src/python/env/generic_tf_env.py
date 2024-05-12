@@ -20,4 +20,9 @@ class GenericTfEnv():
     return step
 
   def get_current_time_step(self):
-    return self.env.curre
+    return self.env.current_time_step()
+
+  def get_observation_spec(self):
+    return self.env.time_step_spec().observation
+
+  def get_action_spec(sel
