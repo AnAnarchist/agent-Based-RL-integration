@@ -7,4 +7,10 @@ This project showcases a proof of concept (PoC) for the framework proposed in:
 [[pre-print (free access)](https://cgi.csc.liv.ac.uk/~lad/emas2019/accepted/EMAS2019_paper_33.pdf)]
 [[talk slides](https://www.slideshare.net/AnAnarchist/emas-2019-from-programming-agents-to-educating-agents)]
 
-Originally proposed by Michael Bosello, Alessandro Ricci and now 
+Originally proposed by Michael Bosello, Alessandro Ricci and now maintained by AnAnarchist.
+
+If you utilize this repository, please cite their *EMAS'19* paper.
+
+```
+@InProceedings{10.1007/978-3-030-51417-4_9,
+author="Bo
