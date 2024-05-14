@@ -13,4 +13,9 @@ If you utilize this repository, please cite their *EMAS'19* paper.
 
 ```
 @InProceedings{10.1007/978-3-030-51417-4_9,
-author="Bo
+author="Bosello, Michael
+and Ricci, Alessandro",
+editor="Dennis, Louise A.
+and Bordini, Rafael H.
+and Lesp{\'e}rance, Yves",
+title="
