@@ -18,4 +18,5 @@ and Ricci, Alessandro",
 editor="Dennis, Louise A.
 and Bordini, Rafael H.
 and Lesp{\'e}rance, Yves",
-title="
+title="From Programming Agents to Educating Agents -- A Jason-Based Framework for Integrating Learning in the Development of Cognitive Agents",
+booktitle="En
