@@ -19,4 +19,10 @@ editor="Dennis, Louise A.
 and Bordini, Rafael H.
 and Lesp{\'e}rance, Yves",
 title="From Programming Agents to Educating Agents -- A Jason-Based Framework for Integrating Learning in the Development of Cognitive Agents",
-booktitle="En
+booktitle="Engineering Multi-Agent Systems",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="175--194"
+}
+``
