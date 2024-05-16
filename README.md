@@ -25,4 +25,8 @@ publisher="Springer International Publishing",
 address="Cham",
 pages="175--194"
 }
-``
+```
+
+___
+
+This is an integration of BDI agents and Reinforcement Learning, based on [Jason](http://jason.sourceforg
