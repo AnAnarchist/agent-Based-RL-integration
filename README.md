@@ -29,4 +29,6 @@ pages="175--194"
 
 ___
 
-This is an integration of BDI agents and Reinforcement Learning, based on [Jason](http://jason.sourceforg
+This is an integration of BDI agents and Reinforcement Learning, based on [Jason](http://jason.sourceforge.net/wp/) (Actually, it is a [JaCaMo](http://jacamo.sourceforge.net/) project).
+
+The basic idea is that a developer could write some plans an
