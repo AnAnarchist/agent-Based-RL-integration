@@ -31,4 +31,6 @@ ___
 
 This is an integration of BDI agents and Reinforcement Learning, based on [Jason](http://jason.sourceforge.net/wp/) (Actually, it is a [JaCaMo](http://jacamo.sourceforge.net/) project).
 
-The basic idea is that a developer could write some plans and let the agent itself learn other plans and use them in a, this not being exclusively for specific ad hoc problems but as 
+The basic idea is that a developer could write some plans and let the agent itself learn other plans and use them in a, this not being exclusively for specific ad hoc problems but as a general feature of the agent platform.
+
+In short, the aim of the framework is to enable the developer to define the learning components with high-level abstractions 
