@@ -33,4 +33,8 @@ This is an integration of BDI agents and Reinforcement Learning, based on [Jason
 
 The basic idea is that a developer could write some plans and let the agent itself learn other plans and use them in a, this not being exclusively for specific ad hoc problems but as a general feature of the agent platform.
 
-In short, the aim of the framework is to enable the developer to define the learning components with high-level abstractions similar to BDI components. Subsequently, these elements injected by the developers are employed by the agent to learn how to fulfill differe
+In short, the aim of the framework is to enable the developer to define the learning components with high-level abstractions similar to BDI components. Subsequently, these elements injected by the developers are employed by the agent to learn how to fulfill different tasks.
+The work of the developer transitions from writing plans to defining a learning phase.
+
+## Framework usage
+Comprehensive description of the fram
