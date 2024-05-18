@@ -37,4 +37,6 @@ In short, the aim of the framework is to enable the developer to define the lear
 The work of the developer transitions from writing plans to defining a learning phase.
 
 ## Framework usage
-Comprehensive description of the fram
+Comprehensive description of the framework, and how to use it, is provided in the original paper (and in the slides linked above).
+
+Developers can create Jason 
