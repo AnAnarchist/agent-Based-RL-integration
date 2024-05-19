@@ -46,4 +46,6 @@ To run the agent system:
 
 	./gradlew run
 
-For using an algori
+For using an algorithm implemented in python, don't forget to run the python agent server _before_ the agent system.
+
+You can use the following commands to start
