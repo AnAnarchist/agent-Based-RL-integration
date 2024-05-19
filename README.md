@@ -39,4 +39,11 @@ The work of the developer transitions from writing plans to defining a learning 
 ## Framework usage
 Comprehensive description of the framework, and how to use it, is provided in the original paper (and in the slides linked above).
 
-Developers can create Jason agents and environments as usual and make use of *"soft plans"* when necessary (along with the appropriate belief). The fr
+Developers can create Jason agents and environments as usual and make use of *"soft plans"* when necessary (along with the appropriate belief). The framework handles the rest of the process.
+
+### Quick start
+To run the agent system:
+
+	./gradlew run
+
+For using an algori
