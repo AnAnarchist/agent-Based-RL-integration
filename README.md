@@ -53,4 +53,9 @@ You can use the following commands to start running the python service:
 	./gradlew --stop
 	./gradlew runPythonAgent
 
-For environments implemented in python, the python environment server 
+For environments implemented in python, the python environment server must be run _before_ the agent system.
+
+To run the python service, use the following commands:
+
+	./gradlew --stop
+	./gradlew runPythonEnv
